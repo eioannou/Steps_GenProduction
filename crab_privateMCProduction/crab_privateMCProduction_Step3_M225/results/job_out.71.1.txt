@@ -1,0 +1,1725 @@
+======== gWMS-CMSRunAnalysis.sh STARTING at Fri Jun  9 17:00:22 GMT 2017 on node53.hexfarm.rutgers.edu ========
+Local time : Fri Jun  9 13:00:22 EDT 2017
+Current system : Linux node53.hexfarm.rutgers.edu 2.6.32-696.1.1.el6.x86_64 #1 SMP Wed Apr 12 08:44:28 CEST 2017 x86_64 x86_64 x86_64 GNU/Linux
+Arguments are -a sandbox.tar.gz --sourceURL=https://cmsweb.cern.ch/crabcache --jobNumber=71 --cmsswVersion=CMSSW_8_0_21 --scramArch=slc6_amd64_gcc530 --inputFile=job_input_file_list_71.txt --runAndLumis=job_lumis_71.json --lheInputFiles=False --firstEvent=None --firstLumi=None --lastEvent=None --firstRun=None --seeding=AutomaticSeeding --scriptExe=None --eventsPerLumi=None --maxRuntime=-1 --scriptArgs=[] -o {}
+SCRAM_ARCH=slc6_amd64_gcc530
+======== HTCONDOR JOB SUMMARY at Fri Jun  9 17:00:22 GMT 2017 START ========
+CRAB ID: 71
+Execution site: T3_US_Rutgers
+Current hostname: node53.hexfarm.rutgers.edu
+Output files: step3.root=step3_71.root
+==== HTCONDOR JOB AD CONTENTS START ====
+== JOB AD: RemoteSlotID = 1
+== JOB AD: CRAB_SaveLogsFlag = 1
+== JOB AD: JOB_GLIDEIN_ProcId = "0"
+== JOB AD: StreamOut = false
+== JOB AD: JOB_GLIDEIN_Entry_Name = "CMS_T3_US_Rutgers_ruhex"
+== JOB AD: CRAB_ReqName = "170609_163147:aioannou_crab_privateMCProduction_Step3_M225"
+== JOB AD: use_x509userproxy = true
+== JOB AD: JOB_CMSSite = "T3_US_Rutgers"
+== JOB AD: ShadowBday = 1497027617
+== JOB AD: CRAB_SiteBlacklist = {  }
+== JOB AD: CRAB_UserRole = undefined
+== JOB AD: MyAddress = "<188.184.91.243:4080?addrs=188.184.91.243-4080&noUDP&sock=3621881_90ac_89762>"
+== JOB AD: TaskType = "Job"
+== JOB AD: ShadowVersion = "$CondorVersion: 8.5.4 May 02 2016 BuildID: 365871 $"
+== JOB AD: NumRestarts = 0
+== JOB AD: SubmitEventNotes = "DAG Node: Job71"
+== JOB AD: x509UserProxyVOName = "cms"
+== JOB AD: DAGParentNodeNames = ""
+== JOB AD: LocalUserCpu = 0.0
+== JOB AD: RemoteUserCpu = 0.0
+== JOB AD: CRAB_OutLFNDir = "/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147"
+== JOB AD: JOB_GLIDEIN_SiteWMS_Queue = "ruhex-osgce.rutgers.edu"
+== JOB AD: CRAB_StageoutPolicy = "local,remote"
+== JOB AD: CRAB_Workflow = "170609_163147:aioannou_crab_privateMCProduction_Step3_M225"
+== JOB AD: OVERFLOW_IT = ifthenelse(regexp("T[1,2]_IT_",DESIRED_Sites),"True",undefined)
+== JOB AD: CMSGroups = "/cms"
+== JOB AD: CurrentHosts = 1
+== JOB AD: OrigCmd = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/gWMS-CMSRunAnalysis.sh"
+== JOB AD: x509UserProxyExpiration = 1497630721
+== JOB AD: Iwd = "/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376"
+== JOB AD: NumShadowStarts = 1
+== JOB AD: JobPrio = 10
+== JOB AD: DiskUsage = 3000
+== JOB AD: CRAB_ASOTimeout = 86400
+== JOB AD: StartdPrincipal = "execute-side@matchsession/128.6.27.224"
+== JOB AD: JOB_GLIDEIN_ToDie = "1497187066"
+== JOB AD: JobRunCount = 1
+== JOB AD: MachineAttrSlotWeight0 = 1
+== JOB AD: JOB_Site = "Rutgers"
+== JOB AD: WantCheckpoint = false
+== JOB AD: RequestDisk = 100000
+== JOB AD: TotalSuspensions = 0
+== JOB AD: DAGNodeName = "Job71"
+== JOB AD: RequestDisk_RAW = 1
+== JOB AD: PeriodicRemove = ( ( JobStatus =?= 5 ) && ( time() - EnteredCurrentStatus > 7 * 60 ) ) || ( ( JobStatus =?= 1 ) && ( time() - EnteredCurrentStatus > 7 * 24 * 60 * 60 ) ) || ( ( JobStatus =?= 2 ) && ( ( MemoryUsage > RequestMemory ) || ( MaxWallTimeMins * 60 < time() - EnteredCurrentStatus ) || ( DiskUsage > 20000000 ) ) ) || ( ( JobStatus =?= 1 ) && ( time() > ( x509UserProxyExpiration + 86400 ) ) )
+== JOB AD: MachineAttrMJF_JOB_HS06_JOB0 = "Unknown"
+== JOB AD: JOBGLIDEIN_CMSSite = "T3_US_Rutgers"
+== JOB AD: RemoteSysCpu = 0.0
+== JOB AD: CRAB_Retry = 1
+== JOB AD: MyType = "Job"
+== JOB AD: Environment = "CRAB_TASKMANAGER_TARBALL=local SCRAM_ARCH=slc6_amd64_gcc530 CRAB_RUNTIME_TARBALL=local"
+== JOB AD: CRAB_JobType = "analysis"
+== JOB AD: PeriodicHold = false
+== JOB AD: MachineAttrTotalSlotCpus0 = 1
+== JOB AD: JOB_GLIDEIN_Job_Max_Time = "34800"
+== JOB AD: CRAB_RestHost = "cmsweb.cern.ch"
+== JOB AD: Owner = "cms364"
+== JOB AD: OVERFLOW_UK = ifthenelse(regexp("T2_UK_London_",DESIRED_Sites),"True",undefined)
+== JOB AD: JOB_GLIDEIN_SiteWMS_JobId = "380901.0"
+== JOB AD: MemoryProvisioned = 2500
+== JOB AD: RemoteHost = "glidein_3268_292735303@node53.hexfarm.rutgers.edu"
+== JOB AD: OVERFLOW_US = ifthenelse(regexp("T[1,2]_US_",DESIRED_Sites),"True",undefined)
+== JOB AD: LastJobLeaseRenewal = 1497027617
+== JOB AD: CRAB_AdditionalOutputFiles = {  }
+== JOB AD: OnExitHold = false
+== JOB AD: CRAB_ASOURL = "https://cmsweb.cern.ch/crabserver/prod"
+== JOB AD: CRAB_NumAutomJobRetries = 2
+== JOB AD: AccountingGroup = "analysis.aioannou"
+== JOB AD: WantRemoteSyscalls = false
+== JOB AD: ExitStatus = 0
+== JOB AD: User = "cms364@cms"
+== JOB AD: JobLeaseDuration = 2400
+== JOB AD: JOB_Gatekeeper = ifthenelse(substr(Used_Gatekeeper,0,1) =!= "$",Used_Gatekeeper,ifthenelse(MATCH_GLIDEIN_Gatekeeper =!= undefined,MATCH_GLIDEIN_Gatekeeper,"Unknown"))
+== JOB AD: DESIRED_OpSyses = "LINUX"
+== JOB AD: DiskProvisioned = 156066056
+== JOB AD: CompletionDate = 0
+== JOB AD: WhenToTransferOutput = "ON_EXIT_OR_EVICT"
+== JOB AD: RequestCpus = 4
+== JOB AD: x509UserProxyFirstFQAN = "/cms/Role=NULL/Capability=NULL"
+== JOB AD: ExecutableSize = 10
+== JOB AD: CommittedSuspensionTime = 0
+== JOB AD: PreJobPrio1 = 1
+== JOB AD: GlobalJobId = "crab3@vocms0144.cern.ch#9176524.0#1497027494"
+== JOB AD: CRAB_ISB = "https://cmsweb.cern.ch/crabcache"
+== JOB AD: StreamErr = false
+== JOB AD: TransferSocket = "<188.184.91.243:4080?addrs=188.184.91.243-4080&noUDP&sock=3621881_90ac_89762>"
+== JOB AD: DAGManNodesLog = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/RunJobs.dag.nodes.log"
+== JOB AD: Rank = 0.0
+== JOB AD: JOB_GLIDEIN_SiteWMS = "HTCondor"
+== JOB AD: TransferInput = "CMSRunAnalysis.sh,cmscp.py,CMSRunAnalysis.tar.gz,sandbox.tar.gz,run_and_lumis.tar.gz,input_files.tar.gz"
+== JOB AD: JobUniverse = 5
+== JOB AD: PeriodicRelease = ( HoldReasonCode == 28 ) || ( HoldReasonCode == 30 ) || ( HoldReasonCode == 13 ) || ( HoldReasonCode == 6 )
+== JOB AD: CRAB_oneEventMode = 0
+== JOB AD: x509userproxy = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/826ebb0c8170c87079c6b52916e636b3d7c9c26d"
+== JOB AD: JOB_GLIDEIN_SEs = "ruhex-osgce.rutgers.edu"
+== JOB AD: JobNotification = 0
+== JOB AD: CRAB_DBSURL = "https://cmsweb.cern.ch/dbs/prod/global/DBSReader"
+== JOB AD: MachineAttrHAS_SINGULARITY0 = false
+== JOB AD: ProcId = 0
+== JOB AD: JOB_GLIDEIN_MaxMemMBs = "2500"
+== JOB AD: DESIRED_CMSDataLocations = "T3_US_PuertoRico,T3_RU_MEPhI,T2_FI_HIP,T2_UK_SGrid_RALPP,T2_FR_GRIF_LLR,T2_UK_London_IC,T3_UK_London_QMUL,T3_TW_NTU_HEP,T3_US_Omaha,T2_KR_KNU,T2_RU_SINP,T3_US_UMD,T2_CH_CERN_AI,T3_US_Colorado,T2_CH_CSCS_HPC,T2_TH_CUNSTDA,T3_US_Kansas,T3_GR_IASA,T2_IT_Bari,T2_US_UCSD,T2_RU_IHEP,T1_RU_JINR,T3_US_JHU,T3_BY_NCPHEP,T3_US_TTU,T3_US_UCR,T3_TW_NCU,T2_CH_CSCS,T2_UA_KIPT,T2_PK_NCP,T2_RU_PNPI,T3_US_UCD,T3_CO_Uniandes,T3_KR_KNU,T2_FR_IPHC,T3_US_OSU,T3_US_TAMU,T1_US_FNAL,T2_IT_Rome,T2_UK_London_Brunel,T3_IN_PUHEP,T3_US_OSG,T3_IT_Trieste,T2_EE_Estonia,T2_IN_TIFR,T2_CN_Beijing,T2_US_Florida,T3_US_Princeton_ICSE,T3_US_Rutgers,T1_DE_KIT,T2_US_Wisconsin,T2_HU_Budapest,T2_DE_RWTH,T2_US_Vanderbilt,T3_IT_Perugia,T3_UK_SGrid_Oxford,T3_US_NU,T3_US_UMiss,T2_BR_UERJ,T2_CH_CERN,T3_MX_Cinvestav,T3_US_FNALLPC,T3_RU_FIAN,T3_US_Cornell,T2_ES_IFCA,T3_ES_Oviedo,T3_US_NotreDame,T2_DE_DESY,T1_UK_RAL,T3_HU_Debrecen,T2_US_Caltech,T3_FR_IPNL,T3_BG_UNI_SOFIA,T3_UK_London_RHUL,T3_IN_TIFRCloud,T0_CH_CERN,T3_CN_PKU,T3_US_Baylor,T2_US_Nebraska,T2_ES_CIEMAT,T3_UK_ScotGrid_GLA,T3_US_FSU,T3_KR_UOS,T2_BR_SPRACE,T1_IT_CNAF,T2_TR_METU,T2_AT_Vienna,T3_CH_CERN_CAF,T2_US_Purdue,T3_US_Rice,T2_TW_NCHC,T2_BE_UCL,T3_US_FIT,T2_UK_SGrid_Bristol,T2_PT_NCG_Lisbon,T1_ES_PIC,T2_IT_Legnaro,T2_RU_ITEP,T3_US_SDSC,T3_US_FIU,T2_RU_JINR,T2_IT_Pisa,T2_GR_Ioannina,T3_US_MIT,T3_US_UCSB,T2_MY_UPM_BIRUNI,T1_FR_CCIN2P3,T2_FR_GRIF_IRFU,T3_US_NERSC,T2_FR_CCIN2P3,T2_CH_CERN_HLT,T2_PL_Warsaw,T2_US_MIT,T2_BE_IIHE,T2_RU_INR,T2_PL_Swierk,T3_CH_PSI,T3_IT_Bologna"
+== JOB AD: PublicClaimId = "<192.168.1.54:41390>#1497016822#5#..."
+== JOB AD: ShadowIpAddr = "<188.184.91.243:4080?addrs=188.184.91.243-4080&noUDP&sock=3621881_90ac_89762>"
+== JOB AD: Used_Gatekeeper = "ruhex-osgce.rutgers.edu:2119/jobmanager-condor"
+== JOB AD: CondorVersion = "$CondorVersion: 8.5.4 May 02 2016 BuildID: 365871 $"
+== JOB AD: Arguments = "-a sandbox.tar.gz --sourceURL=https://cmsweb.cern.ch/crabcache --jobNumber=71 --cmsswVersion=CMSSW_8_0_21 --scramArch=slc6_amd64_gcc530 --inputFile=job_input_file_list_71.txt --runAndLumis=job_lumis_71.json --lheInputFiles=False --firstEvent=None --firstLumi=None --lastEvent=None --firstRun=None --seeding=AutomaticSeeding --scriptExe=None --eventsPerLumi=None --maxRuntime=-1 --scriptArgs=[] -o {}"
+== JOB AD: ShouldTransferFiles = "YES"
+== JOB AD: Out = "_condor_stdout"
+== JOB AD: JOB_GLIDEIN_Memory = "2500"
+== JOB AD: NumJobMatches = 1
+== JOB AD: CumulativeSlotTime = 0
+== JOB AD: OnExitRemove = true
+== JOB AD: SpoolOnEvict = false
+== JOB AD: JOB_GLIDEIN_Max_Walltime = "171000"
+== JOB AD: JobAdInformationAttrs = "MATCH_EXP_JOBGLIDEIN_CMSSite, JOBGLIDEIN_CMSSite, RemoteSysCpu, RemoteUserCpu"
+== JOB AD: In = "/dev/null"
+== JOB AD: LastJobStatus = 1
+== JOB AD: CumulativeSuspensionTime = 0
+== JOB AD: ServerTime = 1497027617
+== JOB AD: CRAB_TaskWorker = "vocms052"
+== JOB AD: OrigMaxHosts = 1
+== JOB AD: TransferIn = false
+== JOB AD: CRAB_Id = "71"
+== JOB AD: JOB_GLIDEIN_Name = "gfactory_instance"
+== JOB AD: WantRemoteIO = true
+== JOB AD: OrigIwd = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0"
+== JOB AD: ImageSize = 10
+== JOB AD: ExecutableSize_RAW = 9
+== JOB AD: JobCurrentStartDate = 1497027617
+== JOB AD: x509userproxysubject = "/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou"
+== JOB AD: NumJobStarts = 0
+== JOB AD: DESIRED_Overflow_Region = strcat(ifthenelse(OVERFLOW_US =?= "True","US","none"),",",ifthenelse(OVERFLOW_IT =?= "True","IT","none"),",",ifthenelse(OVERFLOW_UK =?= "True","UK","none"))
+== JOB AD: Cmd = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/gWMS-CMSRunAnalysis.sh"
+== JOB AD: JobStartDate = 1497027617
+== JOB AD: LastMatchTime = 1497027617
+== JOB AD: JOB_GLIDEIN_CMSSite = "T3_US_Rutgers"
+== JOB AD: CoreSize = -1
+== JOB AD: TargetType = "Machine"
+== JOB AD: TransferOutput = "jobReport.json.71"
+== JOB AD: CommittedSlotTime = 0
+== JOB AD: EstimatedWallTimeMins = 1250
+== JOB AD: JobStatus = 2
+== JOB AD: x509UserProxyEmail = "aimilios.ioannou@cern.ch"
+== JOB AD: DAGManJobId = 9176382
+== JOB AD: RemoteWallClockTime = 0.0
+== JOB AD: NumSystemHolds = 0
+== JOB AD: CRAB_UserDN = "/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou"
+== JOB AD: JOB_GLIDEIN_Site = "Rutgers"
+== JOB AD: AcctGroup = "analysis"
+== JOB AD: Requirements = ( ( ( target.IS_GLIDEIN =!= true ) || ( target.GLIDEIN_CMSSite =!= undefined ) ) ) && ( TARGET.Arch == "X86_64" ) && ( TARGET.OpSys == "LINUX" ) && ( TARGET.Disk >= RequestDisk ) && ( TARGET.Memory >= RequestMemory ) && ( TARGET.HasFileTransfer )
+== JOB AD: CRAB_EDMOutputFiles = { "step3.root" }
+== JOB AD: DESIRED_SITES = "T3_US_PuertoRico,T3_RU_MEPhI,T2_FI_HIP,T2_UK_SGrid_RALPP,T2_FR_GRIF_LLR,T3_US_Baylor,T3_UK_London_QMUL,T3_TW_NTU_HEP,T3_US_Omaha,T2_KR_KNU,T3_US_UMD,T2_CH_CERN_AI,T3_US_Colorado,T2_CH_CSCS_HPC,T2_IT_Bari,T2_US_UCSD,T2_RU_IHEP,T1_RU_JINR,T2_CH_CERN,T3_US_TTU,T3_US_UCR,T3_TW_NCU,T2_CH_CSCS,T2_UA_KIPT,T2_PK_NCP,T3_KR_KNU,T2_FR_IPHC,T3_US_OSU,T3_US_TAMU,T1_US_FNAL,T3_IT_Trieste,T2_IT_Rome,T2_UK_London_Brunel,T3_US_OSG,T2_US_Vanderbilt,T2_EE_Estonia,T2_IN_TIFR,T2_CN_Beijing,T2_US_Florida,T3_US_Rutgers,T1_DE_KIT,T2_US_Wisconsin,T2_HU_Budapest,T2_DE_RWTH,T3_IT_Perugia,T3_UK_SGrid_Oxford,T3_US_NERSC,T3_MX_Cinvestav,T3_US_FNALLPC,T3_US_Cornell,T2_ES_IFCA,T2_DE_DESY,T1_UK_RAL,T3_HU_Debrecen,T2_US_Caltech,T3_FR_IPNL,T3_BG_UNI_SOFIA,T3_UK_London_RHUL,T2_UK_London_IC,T2_US_Nebraska,T2_ES_CIEMAT,T3_UK_ScotGrid_GLA,T2_BR_SPRACE,T1_IT_CNAF,T2_AT_Vienna,T3_CH_CERN_CAF,T2_US_Purdue,T3_US_Rice,T2_TW_NCHC,T2_BE_UCL,T3_US_FIT,T2_UK_SGrid_Bristol,T2_PT_NCG_Lisbon,T1_ES_PIC,T2_IT_Legnaro,T3_US_SDSC,T3_US_FIU,T2_RU_JINR,T2_IT_Pisa,T2_GR_Ioannina,T3_US_UCSB,T1_FR_CCIN2P3,T2_FR_GRIF_IRFU,T3_US_UMiss,T2_FR_CCIN2P3,T2_CH_CERN_HLT,T2_US_MIT,T2_BE_IIHE,T2_PL_Swierk,T3_IT_Bologna"
+== JOB AD: NumCkpts = 0
+== JOB AD: StartdIpAddr = "<192.168.1.54:41390?CCBID=188.184.83.197:9642%3faddrs%3d188.184.83.197-9642#2500718&addrs=192.168.1.54-41390&noUDP>"
+== JOB AD: CMS_ALLOW_OVERFLOW = "True"
+== JOB AD: RequestMemory_RAW = 2000
+== JOB AD: DiskUsage_RAW = 2782
+== JOB AD: DAGManNodesMask = "0,1,2,4,5,7,9,10,11,12,13,16,17,24,27"
+== JOB AD: CRAB_localOutputFiles = "step3.root=step3_71.root"
+== JOB AD: MaxHosts = 1
+== JOB AD: CRAB_UserHN = "aioannou"
+== JOB AD: CRAB_SubmitterIpAddr = "188.184.93.47"
+== JOB AD: JOB_GLIDEIN_SiteWMS_Slot = "slot3@node53.hexfarm.rutgers.edu"
+== JOB AD: CondorPlatform = "$CondorPlatform: x86_64_RedHat6 $"
+== JOB AD: CRAB_OutTempLFNDir = "/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147"
+== JOB AD: AcctGroupUser = "cms364"
+== JOB AD: ImageSize_RAW = 9
+== JOB AD: JOB_GLIDECLIENT_Name = "CMSG-v1_0.main"
+== JOB AD: LocalSysCpu = 0.0
+== JOB AD: LastSuspensionTime = 0
+== JOB AD: CpusProvisioned = 1
+== JOB AD: CRAB_ParentId = "71"
+== JOB AD: UserLog = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/job_log"
+== JOB AD: CRAB_TransferOutputs = 1
+== JOB AD: CRAB_DataBlock = "UserFilesFakeBlock"
+== JOB AD: JOB_GLIDEIN_Factory = "OSGGOC"
+== JOB AD: TransferInputSizeMB = 2
+== JOB AD: MachineAttrCpus0 = 1
+== JOB AD: CRAB_RestURInoAPI = "/crabserver/prod"
+== JOB AD: CRAB_JobArch = "slc6_amd64_gcc530"
+== JOB AD: QDate = 1497027494
+== JOB AD: CRAB_PublishDBSURL = "https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter"
+== JOB AD: CRAB_PublishGroupName = 0
+== JOB AD: x509UserProxyFQAN = "/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou,/cms/Role=NULL/Capability=NULL"
+== JOB AD: Err = "_condor_stderr"
+== JOB AD: CRAB_SiteWhitelist = {  }
+== JOB AD: CRAB_Destination = "gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/log/cmsRun_71.log.tar.gz, gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/step3_71.root"
+== JOB AD: CRAB_RetryOnASOFailures = 1
+== JOB AD: CRAB_TFileOutputFiles = {  }
+== JOB AD: accounting_group = analysis
+== JOB AD: PostJobPrio1 = -1497025934
+== JOB AD: ExitBySignal = false
+== JOB AD: CRAB_UserGroup = undefined
+== JOB AD: PostJobPrio2 = 1
+== JOB AD: PeriodicRemoveReason = ifThenElse(time() - EnteredCurrentStatus > 7 * 24 * 60 * 60 && isUndefined(MemoryUsage),"Removed due to idle time limit",ifThenElse(time() > x509UserProxyExpiration,"Removed job due to proxy expiration",ifThenElse(MemoryUsage > RequestMemory,"Removed due to memory use",ifThenElse(MaxWallTimeMins * 60 < time() - EnteredCurrentStatus,"Removed due to wall clock limit",ifThenElse(DiskUsage > 20000000,"Removed due to disk usage","Removed due to job being held")))))
+== JOB AD: MachineAttrDIRACBenchmark0 = 8.750437522069999
+== JOB AD: BufferBlockSize = 32768
+== JOB AD: ClusterId = 9176524
+== JOB AD: CRAB_AsyncDest = "T2_CH_CERN"
+== JOB AD: UidDomain = "cms"
+== JOB AD: CRAB_PublishName = "crab_privateMCProduction_Step3_M225-00000000000000000000000000000000"
+== JOB AD: DelegatedProxyExpiration = 1497630721
+== JOB AD: CRAB_Publish = 0
+== JOB AD: ProvisionedResources = "Cpus Memory Disk Swap"
+== JOB AD: RequestMemory = 2000
+== JOB AD: EnteredCurrentStatus = 1497027617
+== JOB AD: JOB_GLIDEIN_ToRetire = "1497152266"
+== JOB AD: BufferSize = 524288
+== JOB AD: CRAB_JobSW = "CMSSW_8_0_21"
+== JOB AD: JOB_GLIDEIN_Schedd = "schedd_glideins9@glidein.grid.iu.edu"
+== JOB AD: MaxWallTimeMins = ( JobStatus =?= 1 ) ? EstimatedWallTimeMins : 1250
+== JOB AD: LeaveJobInQueue = false
+== JOB AD: EncryptExecuteDirectory = false
+== JOB AD: NumCkpts_RAW = 0
+== JOB AD: DESIRED_Archs = "X86_64"
+== JOB AD: MinHosts = 1
+== JOB AD: DESIRED_OpSysMajorVers = "6"
+== JOB AD: OVERFLOW_CHECK = ifthenelse(MATCH_GLIDEIN_CMSSite =!= undefined,ifthenelse(stringListMember(MATCH_GLIDEIN_CMSSite,DESIRED_Sites),false,true),false)
+== JOB AD: JOB_GLIDEIN_ClusterId = "4276704"
+== JOB AD: CRAB_ASODB = "filetransfers"
+== JOB AD: CRAB_PrimaryDataset = "CRAB_UserFiles"
+== JOB AD: NiceUser = false
+== JOB AD: DESIRED_CMSDataset = undefined
+== JOB AD: RootDir = "/"
+== JOB AD: CommittedTime = 0
+==== HTCONDOR JOB AD CONTENTS FINISH ====
+======== HTCONDOR JOB SUMMARY at Fri Jun  9 17:00:22 GMT 2017 FINISH ========
+======== PROXY INFORMATION START at Fri Jun  9 17:00:22 GMT 2017 ========
+subject   : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou/CN=738582671/CN=1772214399/CN=983435492/CN=1199660447/CN=482367967/CN=268999988
+issuer    : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou/CN=738582671/CN=1772214399/CN=983435492/CN=1199660447/CN=482367967
+identity  : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou/CN=738582671/CN=1772214399/CN=983435492/CN=1199660447/CN=482367967
+type      : RFC compliant proxy
+strength  : 1024 bits
+path      : /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/826ebb0c8170c87079c6b52916e636b3d7c9c26d
+timeleft  : 167:31:39
+key usage : Digital Signature, Key Encipherment
+=== VO cms extension information ===
+VO        : cms
+subject   : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou
+issuer    : /DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch
+attribute : /cms/Role=NULL/Capability=NULL
+timeleft  : 167:31:41
+uri       : lcg-voms2.cern.ch:15002
+======== PROXY INFORMATION FINISH at Fri Jun  9 17:00:22 GMT 2017 ========
+======== CMSRunAnalysis.sh at Fri Jun  9 17:00:22 GMT 2017 STARTING ========
+======== CMSRunAnalysis.sh STARTING at Fri Jun  9 17:00:22 GMT 2017 ========
+Local time : Fri Jun  9 13:00:22 EDT 2017
+Current system : Linux node53.hexfarm.rutgers.edu 2.6.32-696.1.1.el6.x86_64 #1 SMP Wed Apr 12 08:44:28 CEST 2017 x86_64 x86_64 x86_64 GNU/Linux
+==== CMSSW pre-execution environment bootstrap STARTING ====
++ '[' -f /cmsset_default.sh ']'
++ '[' -f /osg/osg3.2/app_dir/cmssoft/cms/cmsset_default.sh ']'
++ echo 'OSG style'
+OSG style
++ set +x
++ declare -a VERSIONS
++ VERSIONS=($(ls $OSG_APP/cmssoft/cms/$SCRAM_ARCH/external/python | egrep '2.[67]'))
+++ ls /osg/osg3.2/app_dir/cmssoft/cms/slc6_amd64_gcc530/external/python
+++ egrep '2.[67]'
++ PY_PATH=/osg/osg3.2/app_dir/cmssoft/cms/slc6_amd64_gcc530/external/python
++ echo 'python version: ' 2.7.11-giojec
+python version:  2.7.11-giojec
++ set +x
+==== CMSSW pre-execution environment bootstrap FINISHING at Fri Jun  9 17:00:22 GMT 2017 ====
+==== Python discovery STARTING ====
+Python found in /osg/osg3.2/app_dir/cmssoft/cms/slc6_amd64_gcc530/external/python/2.7.11-giojec
+I found python at..
+/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/bin/python
+==== Python discovery FINISHING at Fri Jun  9 17:00:22 GMT 2017 ====
+======== Current environment dump STARTING ========
+== ENV: GLIDEIN_ResourceName=rutgers-cms
+== ENV: GLIDEIN_SEs=ruhex-osgce.rutgers.edu
+== ENV: MANPATH=/osg/osg3.2/app_dir/cmssoft/cms/share/man:/osg/osg3.2/osg-wn-client/usr/share/man
+== ENV: _CONDOR_JOB_PIDS=
+== ENV: _CONDOR_ANCESTOR_31376=31380:1497027622:1259782716
+== ENV: GRIDMAP=/HTClocal/execute/dir_3264/glide_dV3wSs/grid-mapfile
+== ENV: GLIDEIN_REQUIRE_GLEXEC_USE=False
+== ENV: REQUIRED_OS=
+== ENV: OSG_GLEXEC_LOCATION=/usr/sbin/glexec
+== ENV: VOMS_USERCONF=/osg/osg3.2/osg-wn-client/etc/vomses
+== ENV: CHANGED_X509=/home/uscms01/.globus/uscms01/.globus/job/ruhex-osgce/16650367802285369301.7986126787905221048/x509_user_proxy
+== ENV: GLOBUS_LOCATION=/osg/osg3.2/osg-wn-client/usr
+== ENV: TMPDIR=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: PERL5LIB=/osg/osg3.2/osg-wn-client/usr/share/perl5/vendor_perl:/osg/osg3.2/osg-wn-client/usr/share/perl5
+== ENV: GLIDECLIENT_Signature=d10931e33d35ef9eab2de3f3f2949cc181d2a8f0
+== ENV: CVSROOT=:gserver:cmssw.cvs.cern.ch:/local/reps/CMSSW
+== ENV: GLOBUS_GASS_CACHE_DEFAULT=/home/uscms01/.globus/.gass_cache
+== ENV: _CONDOR_SCRATCH_DIR=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: HAS_CVMFS_singularity_opensciencegrid_org=True
+== ENV: X509_CERT_DIR=/osg/osg3.2/osg-wn-client/etc/grid-security/certificates
+== ENV: OSG_WN_TMP=/tmp
+== ENV: CMS_VALIDATION_FRONTIER=0
+== ENV: SCRAM_ARCH=slc6_amd64_gcc530
+== ENV: GLIDEIN_Max_Idle=1200
+== ENV: GLIDEIN_SE_BASEPATH=srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/store/
+== ENV: GLIDEIN_REQUIRE_VOMS=False
+== ENV: OSG_SQUID_LOCATION=ruhex-osgce.hexfarm.rutgers.edu:3128
+== ENV: OSG_JOB_CONTACT=ruhex-osgce.rutgers.edu/jobmanager-condor
+== ENV: JOBSTARTDIR=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: _CHIRP_DELAYED_UPDATE_PREFIX=Chirp*
+== ENV: CRAB_Retry=1
+== ENV: CONDOR_PARENT_ID=node53:31376:1497027618
+== ENV: LD_LIBRARY_PATH=/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/sqlite/3.12.2/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/libffi/3.2.1/lib64:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gdbm/1.10/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/readline/6.3/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/ncurses/6.0-20151128-ikhhed/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/db6/6.0.30/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/expat/2.1.0/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/openssl/1.0.2d/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/bz2lib/1.0.6/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/zlib/1.2.8/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gcc/5.3.0/lib64:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gcc/5.3.0/lib:/osg/osg3.2/osg-wn-client/usr/lib64:/osg/osg3.2/osg-wn-client/usr/lib:/osg/osg3.2/osg-wn-client/usr/lib64/dcap:/osg/osg3.2/osg-wn-client/usr/lib64/lcgdm:/usr/lib
+== ENV: TEMP=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: OSG_SINGULARITY_IMAGE=
+== ENV: GLIDEIN_Entry_Name=CMS_T3_US_Rutgers_ruhex
+== ENV: BATCH_SYSTEM=HTCondor
+== ENV: GLIDEIN_Name=gfactory_instance
+== ENV: OSG_SINGULARITY_IMAGE_DEFAULT=
+== ENV: OSG_LOCATION=/osg/osg3.2/osg-wn-client
+== ENV: CVMFS_oasis_opensciencegrid_org_TIMESTAMP=1496866955
+== ENV: _CONDOR_CHIRP_CONFIG=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/.chirp.config
+== ENV: GLIDEIN_Entry_Signature=db86dba71c2d1906d054c50d2b063116250c9a49
+== ENV: CONDOR_PROCD_ADDRESS_BASE=/HTClocal/execute/dir_3264/glide_dV3wSs/log/procd_address
+== ENV: GLIDECLIENT_Name=CMSG-v1_0.main
+== ENV: GLIDEIN_Site=Rutgers
+== ENV: _CONDOR_ANCESTOR_11234=11237:1497016821:766875105
+== ENV: PATH=/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/sqlite/3.12.2/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gdbm/1.10/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/ncurses/6.0-20151128-ikhhed/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/db6/6.0.30/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/expat/2.1.0/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/openssl/1.0.2d/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/bz2lib/1.0.6/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gcc/5.3.0/bin:/cvmfs/cms.cern.ch/common:/cvmfs/cms.cern.ch/bin:/osg/osg3.2/osg-wn-client/usr/bin:/osg/osg3.2/osg-wn-client/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+== ENV: HOLD_GRACE_TIME=0
+== ENV: HAS_CVMFS_oasis_opensciencegrid_org=True
+== ENV: CMS_PATH=/osg/osg3.2/app_dir/cmssoft/cms
+== ENV: MY_INITIAL_DIR=$_CONDOR_SCRATCH_DIR
+== ENV: _CONDOR_ANCESTOR_11237=31376:1497027617:2904643987
+== ENV: CONDOR_CONFIG=/HTClocal/execute/dir_3264/glide_dV3wSs/condor_config
+== ENV: OSG_DATA=/osg/osg3.2/data_dir/
+== ENV: OSG_APP=/osg/osg3.2/app_dir
+== ENV: PWD=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: CRAB_Id=71
+== ENV: X509_USER_CERT=/HTClocal/execute/dir_3264/glide_dV3wSs/hostcert.pem
+== ENV: _CONDOR_WRAPPER_ERROR_FILE=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/.job_wrapper_failure
+== ENV: LANG=C
+== ENV: GLOBUS_REMOTE_IO_URL=/home/uscms01/.globus/uscms01/.globus/job/ruhex-osgce/16650367802285369301.7986126787905221048/remote_io_file
+== ENV: GLIDEIN_Country=US
+== ENV: X509_VOMS_DIR=/osg/osg3.2/osg-wn-client/etc/grid-security/vomsdir
+== ENV: GLIDEIN_Gatekeeper=ruhex-osgce.rutgers.edu:2119/jobmanager-condor
+== ENV: _CONDOR_SLOT=
+== ENV: CRAB_TASKMANAGER_TARBALL=local
+== ENV: GLIDEIN_Tmp_Dir=/HTClocal/execute/dir_3264/glide_dV3wSs/tmp
+== ENV: OSG_GRID=/osg/osg3.2/osg-wn-client/
+== ENV: OSG_SINGULARITY_PATH=
+== ENV: GLIDEIN_Factory=OSGGOC
+== ENV: GLIDEIN_CLAIM_WORKLIFE_DYNAMIC=cpus*(6*3600)
+== ENV: GLIDEIN_GridType=gt2
+== ENV: GLIDEIN_Proxy_URL=None
+== ENV: GLIDECLIENT_Group=main
+== ENV: OSG_HOSTNAME=ruhex-osgce.rutgers.edu
+== ENV: GLIDEIN_Expose_Grid_Env=True
+== ENV: _CONDOR_EXECUTE=/HTClocal/execute/dir_3264/glide_dV3wSs/execute
+== ENV: SHLVL=4
+== ENV: HOME=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: GLIDECLIENT_Group_Signature=759883ebe2364e8e132fd430ce827674a54ae258
+== ENV: HAS_CVMFS_cms_cern_ch=True
+== ENV: GLIDEIN_Max_Tail=1200
+== ENV: OSG_STORAGE_ELEMENT=True
+== ENV: _CONDOR_MACHINE_AD=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/.machine.ad
+== ENV: java_options=-Xms128m
+== ENV: -Xmx512m
+== ENV: X509_USER_PROXY=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/826ebb0c8170c87079c6b52916e636b3d7c9c26d
+== ENV: GSI_AUTHZ_CONF=/dev/null
+== ENV: SLOTS_LAYOUT=fixed
+== ENV: GLIDEIN_CMSSite=T3_US_Rutgers
+== ENV: GLIDEIN_Signature=c3318215fa3fc017419d5061d00088eb1cee5eed
+== ENV: CVMFS_oasis_opensciencegrid_org_REVISION=7450
+== ENV: SCRATCH_DIRECTORY=$_CONDOR_SCRATCH_DIR
+== ENV: OSG_DEFAULT_SE=ruhex-osgce
+== ENV: GLIDEIN_Schedd=schedd_glideins9@glidein.grid.iu.edu
+== ENV: GLIDEIN_REQUIRED_OS=rhel6
+== ENV: LOGNAME=uscms01
+== ENV: PYTHONPATH=/osg/osg3.2/osg-wn-client/usr/lib/python2.6/site-packages:/osg/osg3.2/osg-wn-client/usr/lib64/python2.6/site-packages
+== ENV: GLIDEIN_Glexec_Use=OPTIONAL
+== ENV: TMP=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: HAS_SINGULARITY=false
+== ENV: CVMFS_cms_cern_ch_REVISION=35639
+== ENV: VOS_USING_SE_BASEPATH=CMS
+== ENV: GLIDEIN_Monitoring_Enabled=False
+== ENV: OSG_SITE_NAME=rutgers-cms
+== ENV: GLIDEIN_ClusterId=4276704
+== ENV: GLIDEIN_ProcId=0
+== ENV: OMP_NUM_THREADS=1
+== ENV: _CONDOR_JOB_AD=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/.job.ad
+== ENV: OSG_SINGULARITY_AUTOLOAD=1
+== ENV: CVMFS_singularity_opensciencegrid_org_REVISION=8580
+== ENV: GLIDEIN_LOCAL_TMP_DIR=/tmp/glide_uscms01_TA1nQQ
+== ENV: CRAB_RUNTIME_TARBALL=local
+== ENV: OSG_SINGULARITY_BIND_CVMFS=0
+== ENV: _CONDOR_JOB_IWD=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== ENV: GLOBUS_GRAM_JOB_CONTACT=https://ruhex-osgce.rutgers.edu:35629/16650367802285369301/7986126787905221048/
+== ENV: X509_USER_KEY=/HTClocal/execute/dir_3264/glide_dV3wSs/hostkey.pem
+== ENV: CONDOR_PROCD_ADDRESS=/HTClocal/execute/dir_3264/glide_dV3wSs/log/procd_address
+== ENV: _=/bin/env
+======== Current environment dump FINISHING ========
+======== Tarball initialization STARTING at Fri Jun  9 17:00:22 GMT 2017 ========
++ [[ X == \X ]]
++ [[ local == \l\o\c\a\l ]]
++ tar xvzmf CMSRunAnalysis.tar.gz
+WMCore.zip
+TweakPSet.py
+CMSRunAnalysis.py
+ApmonIf.py
+DashboardAPI.py
+Logger.py
+ProcInfo.py
+apmon.py
+ServerUtilities.py
+CMSGroupMapper.py
+RESTInteractions.py
+DashboardFailure.sh
+libcurl.so.4
+++ pwd
+++ pwd
++ export PYTHONPATH=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/CRAB3.zip:/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/WMCore.zip:/osg/osg3.2/osg-wn-client/usr/lib/python2.6/site-packages:/osg/osg3.2/osg-wn-client/usr/lib64/python2.6/site-packages
++ PYTHONPATH=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/CRAB3.zip:/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/WMCore.zip:/osg/osg3.2/osg-wn-client/usr/lib/python2.6/site-packages:/osg/osg3.2/osg-wn-client/usr/lib64/python2.6/site-packages
++ set +x
+======== Tarball initialization FINISHING at Fri Jun  9 17:00:22 GMT 2017 ========
+==== Local directory contents dump STARTING ====
+PWD: /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+== DIR: 826ebb0c8170c87079c6b52916e636b3d7c9c26d
+== DIR: ApmonIf.py
+== DIR: CMSGroupMapper.py
+== DIR: CMSRunAnalysis.py
+== DIR: CMSRunAnalysis.sh
+== DIR: CMSRunAnalysis.tar.gz
+== DIR: DashboardAPI.py
+== DIR: DashboardFailure.sh
+== DIR: Logger.py
+== DIR: ProcInfo.py
+== DIR: RESTInteractions.py
+== DIR: ServerUtilities.py
+== DIR: TweakPSet.py
+== DIR: WMCore.zip
+== DIR: _condor_stderr
+== DIR: _condor_stdout
+== DIR: apmon.py
+== DIR: cmscp.py
+== DIR: condor_exec.exe
+== DIR: input_files.tar.gz
+== DIR: jobReport.json
+== DIR: jobReport.json.71
+== DIR: libcurl.so.4
+== DIR: run_and_lumis.tar.gz
+== DIR: sandbox.tar.gz
+== DIR: startup_environment.sh
+==== Local directory contents dump FINISHING ====
+======== CMSRunAnalysis.py STARTING at Fri Jun  9 17:00:22 GMT 2017 ========
+Now running the CMSRunAnalysis.py job in /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376...
+++ pwd
++ python CMSRunAnalysis.py -r /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376 -a sandbox.tar.gz --sourceURL=https://cmsweb.cern.ch/crabcache --jobNumber=71 --cmsswVersion=CMSSW_8_0_21 --scramArch=slc6_amd64_gcc530 --inputFile=job_input_file_list_71.txt --runAndLumis=job_lumis_71.json --lheInputFiles=False --firstEvent=None --firstLumi=None --lastEvent=None --firstRun=None --seeding=AutomaticSeeding --scriptExe=None --eventsPerLumi=None --maxRuntime=-1 '--scriptArgs=[]' -o '{}' --oneEventMode=0
+==== CMSRunAnalysis.py STARTING at Fri Jun  9 17:00:23 2017 ====
+Local time : Fri Jun  9 13:00:23 2017
+Dashboard early startup params: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_1', 'SyncCE': 'ruhex-osgce.rutgers.edu', 'OverflowFlag': 0, 'SyncSite': 'T3_US_Rutgers', 'SyncGridJobId': 'https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225', 'WNHostName': 'node53.hexfarm.rutgers.edu'}
+==== Parameters Dump at Fri Jun  9 17:00:23 2017 ===
+archiveJob:     sandbox.tar.gz
+runDir:         /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376
+sourceURL:      https://cmsweb.cern.ch/crabcache
+jobNumber:      71
+cmsswVersion:   CMSSW_8_0_21
+scramArch:      slc6_amd64_gcc530
+inputFile       job_input_file_list_71.txt
+outFiles:       {}
+runAndLumis:    job_lumis_71.json
+lheInputFiles:  False
+firstEvent:     None
+firstLumi:      None
+eventsPerLumi:  None
+lastEvent:      None
+firstRun:       None
+seeding:        AutomaticSeeding
+userFiles:      None
+oneEventMode:   0
+scriptExe:      None
+scriptArgs:     []
+maxRuntime:     -1
+===================
+==== Sandbox preparation STARTING at Fri Jun  9 17:00:23 2017 ====
+Sandbox sandbox.tar.gz already exists, skipping
+lib/
+lib/slc6_amd64_gcc530/
+biglib/
+biglib/slc6_amd64_gcc530/
+PSet.py
+PSet.pkl
+PSetDump.py
+==== Sandbox preparation FINISHING at Fri Jun  9 17:00:23 2017 ====
+==== WMCore filesystem preparation STARTING at Fri Jun  9 17:00:23 2017 ====
+==== WMCore filesystem preparation FINISHING at Fri Jun  9 17:00:23 2017 ====
+Dashboard startup parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_1', 'WNHostName': 'node53.hexfarm.rutgers.edu', 'ExeStart': 'cmsRun'}
+==== CMSSW Stack Execution STARTING at Fri Jun  9 17:00:23 2017 ====
+==== SCRAM Obj CREATED at Fri Jun  9 17:00:23 2017 ====
+lib/
+lib/slc6_amd64_gcc530/
+biglib/
+biglib/slc6_amd64_gcc530/
+PSet.py
+PSet.pkl
+PSetDump.py
+==== CMSSW JOB Execution started at Fri Jun  9 17:00:25 2017 ====
+2017-06-09 17:00:25,134:INFO:Scram:    Invoking command: python -c 'from PSetTweaks.WMTweak import makeTweak;config = __import__("WMTaskSpace.cmsRun.PSet", globals(), locals(), ["process"], -1);tweakJson = makeTweak(config.process).jsondictionary();print tweakJson["process"]["outputModules_"]'
+2017-06-09 17:00:29,052:INFO:CMSSW:User files are 
+2017-06-09 17:00:29,052:INFO:CMSSW:User sandboxes are sandbox.tar.gz
+2017-06-09 17:00:29,053:INFO:CMSSW:CMSSW configured for 1 cores and 0 event streams
+2017-06-09 17:00:29,053:INFO:CMSSW:Executing CMSSW step
+2017-06-09 17:00:29,053:INFO:CMSSW:Runing SCRAM
+2017-06-09 17:00:29,509:INFO:CMSSW:Running PRE scripts
+2017-06-09 17:00:29,509:INFO:CMSSW:RUNNING SCRAM SCRIPTS
+2017-06-09 17:00:29,514:INFO:Scram:    Invoking command: python /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/TweakPSet.py --location=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376 --inputFile='job_input_file_list_71.txt' --runAndLumis='job_lumis_71.json' --firstEvent=None --lastEvent=None --firstLumi=None --firstRun=None --seeding=AutomaticSeeding --lheInputFiles=False --oneEventMode=0 --eventsPerLumi=None --maxRuntime=-1 
+
+2017-06-09 17:00:36,583:INFO:CMSSW:Executing CMSSW. args: ['/bin/bash', '/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']
+2017-06-09 17:12:22,637:CRITICAL:CMSSW:Error running cmsRun
+{'arguments': ['/bin/bash', '/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']}
+Return code: 85
+
+==== CMSSW Stack Execution FAILED at Fri Jun  9 17:12:22 2017 ====
+======== CMSSW OUTPUT STARTING ========
+NOTICE: lines longer than 3000 characters will be truncated
+== CMSSW: Beginning CMSSW wrapper script
+== CMSSW:  slc6_amd64_gcc530 scramv1 CMSSW
+== CMSSW: Performing SCRAM setup...
+== CMSSW: Completed SCRAM setup
+== CMSSW: Retrieving SCRAM project...
+== CMSSW: Untarring  /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/sandbox.tar.gz
+== CMSSW: Completed SCRAM project
+== CMSSW: Executing CMSSW
+== CMSSW: cmsRun  -j FrameworkJobReport.xml PSet.py
+== CMSSW: %MSG-i ThreadSetup:  (NoModuleName) 09-Jun-2017 13:00:40 EDT pre-events
+== CMSSW: setting # threads 1
+== CMSSW: %MSG
+== CMSSW: 09-Jun-2017 13:00:45 EDT  Initiating request to open file /cms/se/phedex/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: 09-Jun-2017 13:00:46 EDT  Fallback request to file root://cmsxrootd.fnal.gov//store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: %MSG-w XrdAdaptor:  file_open 09-Jun-2017 13:01:27 EDT pre-events
+== CMSSW: Data is served from cern.ch instead of original site T2_US_Nebraska
+== CMSSW: %MSG
+== CMSSW: 09-Jun-2017 13:01:28 EDT  Successfully opened file root://cmsxrootd.fnal.gov//store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: Begin processing the 1st record. Run 1, Event 88809, LumiSection 889 at 09-Jun-2017 13:11:42.369 EDT
+== CMSSW: ----- Begin Fatal Exception 09-Jun-2017 13:12:20 EDT-----------------------
+== CMSSW: An exception of category 'FileReadError' occurred while
+== CMSSW:    [0] Processing run: 1 lumi: 889 event: 88809
+== CMSSW:    [1] Running path 'AODSIMoutput_step'
+== CMSSW:    [2] Calling event method for module PoolOutputModule/'AODSIMoutput'
+== CMSSW:    [3] Reading branch edmTriggerResults_TriggerResults__SIM.
+== CMSSW:    Additional Info:
+== CMSSW:       [a] Fatal Root Error: @SUB=TBasket::ReadBasketBuffers
+== CMSSW: basket:edmTriggerResults_TriggerResults__SIM.present has fNevBuf=6 but fEntryOffset=0, pos=5248896, len=120, fNbytes=120, fObjlen=6, trying to repair
+== CMSSW:
+== CMSSW: ----- End Fatal Exception -------------------------------------------------
+== CMSSW: Another exception was caught while trying to clean up files after the primary fatal exception.
+== CMSSW: 09-Jun-2017 13:12:20 EDT  Closed file root://cmsxrootd.fnal.gov//store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: TimeReport> Time report complete in 620.75 seconds
+== CMSSW:  Time Summary:
+== CMSSW:  - Min event:   37.6371
+== CMSSW:  - Max event:   37.6371
+== CMSSW:  - Avg event:   37.6371
+== CMSSW:  - Total loop:  620.638
+== CMSSW:  - Total job:   620.75
+== CMSSW:  Event Throughput: 0.00161125 ev/s
+== CMSSW:  CPU Summary:
+== CMSSW:  - Total loop:  47.7767
+== CMSSW:  - Total job:   47.8897
+== CMSSW:
+== CMSSW:
+== CMSSW: =============================================
+== CMSSW:
+== CMSSW: MessageLogger Summary
+== CMSSW:
+== CMSSW:  type     category        sev    module        subroutine        count    total
+== CMSSW:  ---- -------------------- -- ---------------- ----------------  -----    -----
+== CMSSW:     1 XrdAdaptor           -w file_open                              1        1
+== CMSSW:     2 TimeReport           -e AfterFile                              1        1
+== CMSSW:     3 Additional Exception -s PostEndRun                             1        1
+== CMSSW:     4 Fatal Exception      -s PostProcessPath                        1        1
+== CMSSW:     5 fileAction           -s file_close                             1        1
+== CMSSW:     6 fileAction           -s file_open                              3        3
+== CMSSW:
+== CMSSW:  type    category    Examples: run/evt        run/evt          run/evt
+== CMSSW:  ---- -------------------- ---------------- ---------------- ----------------
+== CMSSW:     1 XrdAdaptor           pre-events
+== CMSSW:     2 TimeReport           PostEndRun
+== CMSSW:     3 Additional Exceptions PostEndRun
+== CMSSW:     4 Fatal Exception      1/88809
+== CMSSW:     5 fileAction           PostEndRun
+== CMSSW:     6 fileAction           pre-events       pre-events       pre-events
+== CMSSW:
+== CMSSW: Severity    # Occurrences   Total Occurrences
+== CMSSW: --------    -------------   -----------------
+== CMSSW: Warning                 1                   1
+== CMSSW: Error                   1                   1
+== CMSSW: System                  6                   6
+== CMSSW: Complete
+== CMSSW: process id is 31914 status is 85
+======== CMSSW OUTPUT FINSHING ========
+ERROR: Caught WMExecutionFailure - code = 85 - name = CmsRunFailure - detail = Error running cmsRun
+{'arguments': ['/bin/bash', '/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']}
+Return code: 85
+
+NOTE: FJR has exit code 8021 and WMCore reports 85; preferring the FJR one.
+ERROR: Exceptional exit at Fri Jun  9 17:12:22 2017 (8021): CmsRunFailure
+CMSSW error message follows.
+Fatal Exception
+An exception of category 'FileReadError' occurred while
+   [0] Processing run: 1 lumi: 889 event: 88809
+   [1] Running path 'AODSIMoutput_step'
+   [2] Calling event method for module PoolOutputModule/'AODSIMoutput'
+   [3] Reading branch edmTriggerResults_TriggerResults__SIM.
+   Additional Info:
+      [a] Fatal Root Error: @SUB=TBasket::ReadBasketBuffers
+basket:edmTriggerResults_TriggerResults__SIM.present has fNevBuf=6 but fEntryOffset=0, pos=5248896, len=120, fNbytes=120, fObjlen=6, trying to repair
+
+ERROR: Traceback follows:
+ Traceback (most recent call last):
+  File "CMSRunAnalysis.py", line 900, in <module>
+    cmssw = executeCMSSWStack(opts, scram)
+  File "CMSRunAnalysis.py", line 698, in executeCMSSWStack
+    cmssw.execute()
+  File "/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/WMCore.zip/WMCore/WMSpec/Steps/Executors/CMSSW.py", line 251, in execute
+    raise WMExecutionFailure(returncode, "CmsRunFailure", msg)
+WMExecutionFailure: CmsRunFailure
+Message: Error running cmsRun
+{'arguments': ['/bin/bash', '/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']}
+Return code: 85
+
+	ModuleName : WMCore.WMSpec.Steps.WMExecutionFailure
+	MethodName : __init__
+	ClassInstance : None
+	FileName : /HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/WMCore.zip/WMCore/WMSpec/Steps/WMExecutionFailure.py
+	ClassName : None
+	LineNumber : 18
+	ErrorNr : 85
+
+Traceback: 
+
+
+
+== Execution site for failed job from site-local-config.xml: T3_US_Rutgers
+Dashboard end parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'CRABUserReadMB': 55.4952, 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_1', 'CrabCpuPercentage': 0.07724145161290322, 'CRABUserWriteMB': 42.3652, 'CrabUserCpuTime': 47.8897, 'NEventsProcessed': 1, 'ExeTime': 620, 'JobExitCode': 8021, 'CRABUserPeakRss': 1584.87, 'NCores': 4, 'ExeExitCode': 8021}
+Dashboard popularity report: {'Basename': '/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000', 'inputFiles': '/step2_73.root::1::EDM::Remote::1', 'BasenameParent': '', 'inputBlocks': 'UserFilesFakeBlock', 'parentFiles': ''}
+==== Failure sleep STARTING at Fri Jun  9 17:12:23 2017 ====
+Sleeping for 479 seconds due to failure.
+==== Failure sleep FINISHING at Fri Jun  9 17:20:23 2017 ====
++ jobrc=85
++ set +x
+== The job had an exit code of 85 
+======== CMSRunAnalysis.py FINISHING at Fri Jun  9 17:20:23 GMT 2017 ========
+==== SCRAM interaction log contents dump STARTING ====
+Log for recording SCRAM command-line output
+-------------------------------------------
+Beginning TweakPSet
+ arguments: ['/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/TweakPSet.py', '--location=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376', '--inputFile=job_input_file_list_71.txt', '--runAndLumis=job_lumis_71.json', '--firstEvent=None', '--lastEvent=None', '--firstLumi=None', '--firstRun=None', '--seeding=AutomaticSeeding', '--lheInputFiles=False', '--oneEventMode=0', '--eventsPerLumi=None', '--maxRuntime=-1']
+One event mode disabled until we can put together a decent version of WMCore.
+TweakPSet.py is going to force one event mode
+Tag chirp updates from CMSSW with _cmsRun_
+Not resizing job
+==== SCRAM interaction log contents dump FINISHING ====
+
+real	20m0.414s
+user	1m30.387s
+sys	0m6.219s
+CMSRunAnalysis.sh complete at Fri Jun  9 17:20:23 GMT 2017 with (short) exit status 85
+======== CMSRunAnalsysis.sh at Fri Jun  9 17:20:23 GMT 2017 FINISHING ========
+======== python2.6 bootstrap for stageout at Fri Jun  9 17:20:23 GMT 2017 STARTING ========
++ '[' -f /cmsset_default.sh ']'
++ '[' -f /osg/osg3.2/app_dir/cmssoft/cms/cmsset_default.sh ']'
++ set +x
++ '[' -e /COMP/slc6_amd64_gcc493/external/python/2.7.6/etc/profile.d/init.sh ']'
++ '[' -e /osg/osg3.2/app_dir/cmssoft/cms/COMP/slc6_amd64_gcc493/external/python/2.7.6/etc/profile.d/init.sh ']'
++ set +x
++ command -v python2.7
++ rc=0
++ set +x
+Found python2.7 at:
+/cvmfs/cms.cern.ch/COMP/slc6_amd64_gcc493/external/python/2.7.6/bin/python2.7
+======== python2.7 bootstrap for stageout at Fri Jun  9 17:20:23 GMT 2017 FINISHING ========
+======== Attempting to notify HTCondor of file stageout ========
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/condor_exec.exe: line 214: condor_chirp: command not found
+======== Stageout at Fri Jun  9 17:20:23 GMT 2017 STARTING ========
+====== Fri Jun  9 17:20:23 2017: cmscp.py STARTING.
+Stageout policy: local, remote
+====== Fri Jun  9 17:20:23 2017: Starting job report validation.
+Job report seems ok (it has the expected structure).
+Retrieved payload exit code ('jobExitCode') = 8021 from job report.
+Retrieved job wrapper exit code ('exitCode') = 8021 from job report.
+====== Fri Jun  9 17:20:23 2017: Finished job report validation (status 0).
+====== Fri Jun  9 17:20:23 2017: Starting to check if user output files exist.
+Output file step3.root exists.
+====== Fri Jun  9 17:20:23 2017: Finished to check if user output files exist (status 0).
+====== Fri Jun  9 17:20:23 2017: Starting to check if user output files are in job report.
+Output file step3.root found in job report.
+====== Fri Jun  9 17:20:23 2017: Finished to check if user output files are in job report (status 0).
+====== Fri Jun  9 17:20:23 2017: Starting creation of user logs archive file.
+Adding cmsRun-stdout.log to archive file cmsRun.log.tar.gz
+Adding cmsRun-stderr.log to archive file cmsRun.log.tar.gz
+Adding FrameworkJobReport.xml to archive file cmsRun.log.tar.gz
+====== Fri Jun  9 17:20:23 2017: Finished creation of user logs archive file (status 0).
+====== Fri Jun  9 17:20:23 2017: Starting initialization of stageout manager for local stageouts.
+       -----> Stageout manager log start
+StageOutMgr::__init__()
+==== Stageout configuration start ====
+Local Stage Out Implementation to be used is: srmv2
+Local Stage Out PNN to be used is T3_US_Rutgers
+Local Stage Out Catalog to be used is trivialcatalog_file:/cvmfs/cms.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=srmv2
+Trivial File Catalog has been loaded:
+	lfn-to-pfn: protocol=direct path-match-re=/+store/test/xrootd/T3_US_Rutgers/+store/(.*) result=/cms/se/phedex/store/$1
+	lfn-to-pfn: protocol=direct path-match-re=(.*) result=/cms/se/phedex$1
+	lfn-to-pfn: protocol=srm path-match-re=(.*) result=file:////cms/se/phedex$1
+	lfn-to-pfn: protocol=srmv2 path-match-re=/+store/(.*) result=srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/$1
+	lfn-to-pfn: protocol=stageout path-match-re=(.*) result=/cms/se/phedex$1 chain=direct
+	lfn-to-pfn: protocol=xrootd path-match-re=/+store/(.*) result=root://cmsxrootd.fnal.gov//store/$1
+	pfn-to-lfn: protocol=direct path-match-re=/+cms/se/phedex/(.*) result=/$1
+	pfn-to-lfn: protocol=srm path-match-re=file:////cms/se/phedex(.*) result=$1
+	pfn-to-lfn: protocol=srmv2 path-match-re=srm://ruhex-osgce\.rutgers\.edu:8443/srm/v2/server\?SFN=/+cms/se/phedex/store/(.*) result=/store/$1
+There are 0 fallback stage out definitions.
+
+==== Stageout configuration finish ====
+       <----- Stageout manager log finish
+Initialization was ok.
+====== Fri Jun  9 17:20:23 2017: Finished initialization of stageout manager for local stageouts (status 0).
+Temp site name not found (likely not present in site-local-config.xml or job report). Falling back to querying the phedex for site name.
+Will use gfal2 commands for direct stageout.
+====== Fri Jun  9 17:20:24 2017: Starting initialization of stageout implementation for direct stageouts.
+Initialization was ok.
+====== Fri Jun  9 17:20:24 2017: Finished initialization of stageout implementation for direct stageouts (status 0).
+====== Fri Jun  9 17:20:24 2017: Starting local stageout of user logs archive file.
+       -----> Stageout manager log start
+==>Working on file: /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+===> Attempting Local Stage Out.
+LFN to PFN match made:
+LFN: /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+PFN: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+
+2017-06-09T13:20:24 : Creating output directory...
+Fri Jun 09 13:20:30 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log does not exist. 
+
+Warning: Exception while invoking command:
+srmls -recursion_depth=0 -retry_num=1 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/logException: Error checking directory existence, Fri Jun 09 13:20:30 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log does not exist. 
+
+
+Go on anyway...
+Fri Jun 09 13:20:36 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed does not exist. 
+
+Warning: Exception while invoking command:
+srmls -recursion_depth=0 -retry_num=1 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failedException: Error checking directory existence, Fri Jun 09 13:20:36 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed does not exist. 
+
+
+Go on anyway...
+Fri Jun 09 13:20:42 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000 does not exist. 
+
+Warning: Exception while invoking command:
+srmls -recursion_depth=0 -retry_num=1 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000Exception: Error checking directory existence, Fri Jun 09 13:20:42 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000 does not exist. 
+
+
+Go on anyway...
+Fri Jun 09 13:20:48 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147 does not exist. 
+
+Warning: Exception while invoking command:
+srmls -recursion_depth=0 -retry_num=1 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147Exception: Error checking directory existence, Fri Jun 09 13:20:48 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147 does not exist. 
+
+
+Go on anyway...
+Fri Jun 09 13:20:53 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225 does not exist. 
+
+Warning: Exception while invoking command:
+srmls -recursion_depth=0 -retry_num=1 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225Exception: Error checking directory existence, Fri Jun 09 13:20:53 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225 does not exist. 
+
+
+Go on anyway...
+Fri Jun 09 13:20:59 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles does not exist. 
+
+Warning: Exception while invoking command:
+srmls -recursion_depth=0 -retry_num=1 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFilesException: Error checking directory existence, Fri Jun 09 13:20:59 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles does not exist. 
+
+
+Go on anyway...
+Fri Jun 09 13:21:05 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1 does not exist. 
+
+Warning: Exception while invoking command:
+srmls -recursion_depth=0 -retry_num=1 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1Exception: Error checking directory existence, Fri Jun 09 13:21:05 EDT 2017: Return status:
+ - Status code:  SRM_FAILURE
+ - Explanation:  null
+SRM_INVALID_PATH   File/directory 0 /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1 does not exist. 
+
+
+Go on anyway...
+  /cms/se/phedex/store/temp/user/
+
+Create directory: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1
+Return code: SRM_FAILURE
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1': Disk quota exceeded
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1
+
+Warning: Exception while invoking command:
+srmmkdir -retry_num=0 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1Exception: Error creating directory, Return code: SRM_FAILURE
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1': Disk quota exceeded
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1
+
+
+Go on anyway...
+Create directory: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles
+Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles
+
+Warning: Exception while invoking command:
+srmmkdir -retry_num=0 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFilesException: Error creating directory, Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles
+
+
+Go on anyway...
+Create directory: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225
+Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225
+
+Warning: Exception while invoking command:
+srmmkdir -retry_num=0 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225Exception: Error creating directory, Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225
+
+
+Go on anyway...
+Create directory: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147
+Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147
+
+Warning: Exception while invoking command:
+srmmkdir -retry_num=0 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147Exception: Error creating directory, Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147
+
+
+Go on anyway...
+Create directory: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000
+Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000
+
+Warning: Exception while invoking command:
+srmmkdir -retry_num=0 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000Exception: Error creating directory, Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000
+
+
+Go on anyway...
+Create directory: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed
+Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed
+
+Warning: Exception while invoking command:
+srmmkdir -retry_num=0 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failedException: Error creating directory, Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed
+
+
+Go on anyway...
+Create directory: srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log
+Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log
+
+Warning: Exception while invoking command:
+srmmkdir -retry_num=0 
+srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/logException: Error creating directory, Return code: SRM_INVALID_PATH
+Explanation: Error:/bin/mkdir: cannot create directory `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log': No such file or directory
+Ref-u uscms01  /bin/mkdir /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log
+
+
+Go on anyway...
+2017-06-09T13:21:51 : Running the stage out...
+Storage Resource Manager (SRM) Client version 2.2
+Copyright (c) 2002-2009 SRM Working Group http://sdm.lbl.gov/srm-wg
+
+SRM Configuration:
+	default_port=8443
+	debug=true
+	srmcphome=..
+	urlcopy=sbin/urlcopy.sh
+	gsiftpclient=globus-url-copy
+	help=false
+	h=false
+	mapfile=conf/SRMServerV1.map
+	webservice_path=null
+	use_proxy=true
+	x509_user_proxy=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/826ebb0c8170c87079c6b52916e636b3d7c9c26d
+	x509_user_cert=
+	x509_user_key=
+	x509_user_trusted_certificates=/osg/osg3.2/osg-wn-client/etc/grid-security/certificates
+	globus_tcp_port_range=null
+	gss_expected_name=null
+	protocols=gsiftp,dcap,http
+	pushmode=false
+	buffer_size=131072
+	tcp_buffer_size=0
+	streams_num=1
+	conf=/osg/osg3.2/osg-wn-client/etc/dcache-srmclient-config.xml
+	save_conf=null
+	do_remove=false
+	copy=true
+	bringOnline=false
+	ping=false
+	reserveSpace=false
+	array_of_client_networks=null
+	retention_policy=null
+	space_desc=null
+	access_latency=null
+	access_pattern=null
+	connection_type=null
+	desired_size=null
+	guaranteed_size=null
+	lifetime=null
+	releaseSpace=false
+	space_token=null
+	force=false
+	getSpaceMetaData=false
+	space_tokens=null
+	copyjobfile=null
+	wsdl_url=null
+	use_urlcopy_script=false
+	getFileMetaData=false
+	ls=false
+	getSpaceTokens=false
+	rm=false
+	rmdir=false
+	mv=false
+	mkdir=false
+	getPermissions=false
+	checkPermissions=false
+	setPermissions=false
+	getRequestSummary=false
+	getRequestTokens=false
+	abortFiles=false
+	releaseFiles=false
+	request_desc=null
+	type=null
+	owner=null
+	group=null
+	other=null
+	request_tokens=null
+	request_token=null
+	file_lifetime=null
+	pin_lifetime=null
+	extendFileLifetime=false
+	advisoryDelete=false
+	getRequestStatus=false
+	request_id=0
+	retry_timeout=10000
+	retry_num=0
+	connect_to_wsdl=false
+	transport=GSI
+	delegate=true
+	full_delegation=true
+	version=false
+	report=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/srm.report.10780
+	server_mode=null
+	storagetype=null
+	stage=false
+	l=false
+	recursive=false
+	offset=0
+	count=null
+	srm_protocol_version=2
+	request_lifetime=2400
+	priority=0
+	overwrite_mode=null
+	send_cksm=true
+	cksm_type=null
+	cksm_value=null
+	abortRequest=false
+	print_performance=false
+	performance_test_name=null
+	repeat=1
+	dryrun=false
+	from[0]=file:////HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz
+	to=srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+
+Fri Jun 09 13:21:52 EDT 2017: In SRMClient ExpectedName: host
+Fri Jun 09 13:21:52 EDT 2017: SRMClient(httpg,srm/managerv2,GSI)
+copy_jobs is empty
+Fri Jun 09 13:21:57 EDT 2017: stopping copierjava.io.IOException: srmPrepareToPut submission failed, unexpected or failed status : SRM_FAILURE
+going to stop....
+Fri Jun 09 13:21:57 EDT 2017: Releasing all remaining file requests
+Fri Jun 09 13:21:57 EDT 2017: srmAbortFiles status code=SRM_NOT_SUPPORTED
+Fri Jun 09 13:21:57 EDT 2017: java.lang.Exception:  stopped 
+srm copy of at least one file failed or not completed
+java.io.IOException: srmPrepareToPut submission failed, unexpected or failed status : SRM_FAILURE
+	at gov.fnal.srm.util.SRMPutClientV2.start(SRMPutClientV2.java:245)
+	at gov.fnal.srm.util.SRMDispatcher.work(SRMDispatcher.java:819)
+	at gov.fnal.srm.util.SRMDispatcher.main(SRMDispatcher.java:375)
+Fri Jun 09 13:21:57 EDT 2017: stopping copier
+Fri Jun 09 13:21:57 EDT 2017: Releasing all remaining file requests
+Fri Jun 09 13:21:57 EDT 2017: srmAbortFiles status code=SRM_NOT_SUPPORTED
+srmcp exit status: 1
+Non-zero srmcp Exit status!!!
+Cleaning up failed file:
+Return code: SRM_FAILURE
+Explanation: null
+file#0 : srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz, SRM_FAILURE, "Error:/bin/rm: cannot remove `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz': No such file or directory
+Ref-u uscms01  /bin/rm /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz"
+
+2017-06-09T13:22:03 : Command exited with status: 23
+
+ERROR: Exception During Stage Out:
+
+2017-06-09T13:22:03 : Command exited non-zero
+Attempt 1 to stage out failed.
+Automatically retrying in 60 secs
+ Error details:
+StageOutError
+Message: 2017-06-09T13:22:03 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/sh
+REPORT_FILE=`pwd`/srm.report.$$
+srmcp -2 -report=$REPORT_FILE -retry_num=0 -request_lifetime=2400 -debug  file:////HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz  srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>&1 | tee srm.output.$$ 
+
+            EXIT_STATUS=`cat $REPORT_FILE | cut -f3 -d" "`
+            echo "srmcp exit status: $EXIT_STATUS"
+            if [[ "X$EXIT_STATUS" == "X" ]] && [[ `grep -c SRM_INVALID_PATH srm.output.$$` != 0 ]]; then
+                exit 1 # dir does not eixst
+            elif [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero srmcp Exit status!!!"
+               echo "Cleaning up failed file:"
+                srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+               exit 60311
+            fi
+
+            FILE_SIZE=`stat -c %s //HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz `
+echo "Local File Size is: $FILE_SIZE"
+
+        SRM_OUTPUT=`srmls -recursion_depth=0 -retry_num=1 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>/dev/null`
+        SRM_SIZE=`echo $SRM_OUTPUT | grep '/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz' | grep -v 'ruhex-osgce.rutgers.edu' | awk '{print $1;}'`
+        echo "SRM Size is $SRM_SIZE"
+        if [[ $SRM_SIZE == $FILE_SIZE ]]; then
+           exit 0
+        else
+           echo $SRM_OUTPUT
+           echo "ERROR: Size Mismatch between local and SE. Cleaning up failed file..."
+           srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+           exit 60311
+        fi
+        
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+
+
+
+2017-06-09T13:23:03 : Running the stage out...
+Storage Resource Manager (SRM) Client version 2.2
+Copyright (c) 2002-2009 SRM Working Group http://sdm.lbl.gov/srm-wg
+
+SRM Configuration:
+	default_port=8443
+	debug=true
+	srmcphome=..
+	urlcopy=sbin/urlcopy.sh
+	gsiftpclient=globus-url-copy
+	help=false
+	h=false
+	mapfile=conf/SRMServerV1.map
+	webservice_path=null
+	use_proxy=true
+	x509_user_proxy=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/826ebb0c8170c87079c6b52916e636b3d7c9c26d
+	x509_user_cert=
+	x509_user_key=
+	x509_user_trusted_certificates=/osg/osg3.2/osg-wn-client/etc/grid-security/certificates
+	globus_tcp_port_range=null
+	gss_expected_name=null
+	protocols=gsiftp,dcap,http
+	pushmode=false
+	buffer_size=131072
+	tcp_buffer_size=0
+	streams_num=1
+	conf=/osg/osg3.2/osg-wn-client/etc/dcache-srmclient-config.xml
+	save_conf=null
+	do_remove=false
+	copy=true
+	bringOnline=false
+	ping=false
+	reserveSpace=false
+	array_of_client_networks=null
+	retention_policy=null
+	space_desc=null
+	access_latency=null
+	access_pattern=null
+	connection_type=null
+	desired_size=null
+	guaranteed_size=null
+	lifetime=null
+	releaseSpace=false
+	space_token=null
+	force=false
+	getSpaceMetaData=false
+	space_tokens=null
+	copyjobfile=null
+	wsdl_url=null
+	use_urlcopy_script=false
+	getFileMetaData=false
+	ls=false
+	getSpaceTokens=false
+	rm=false
+	rmdir=false
+	mv=false
+	mkdir=false
+	getPermissions=false
+	checkPermissions=false
+	setPermissions=false
+	getRequestSummary=false
+	getRequestTokens=false
+	abortFiles=false
+	releaseFiles=false
+	request_desc=null
+	type=null
+	owner=null
+	group=null
+	other=null
+	request_tokens=null
+	request_token=null
+	file_lifetime=null
+	pin_lifetime=null
+	extendFileLifetime=false
+	advisoryDelete=false
+	getRequestStatus=false
+	request_id=0
+	retry_timeout=10000
+	retry_num=0
+	connect_to_wsdl=false
+	transport=GSI
+	delegate=true
+	full_delegation=true
+	version=false
+	report=/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/srm.report.11109
+	server_mode=null
+	storagetype=null
+	stage=false
+	l=false
+	recursive=false
+	offset=0
+	count=null
+	srm_protocol_version=2
+	request_lifetime=2400
+	priority=0
+	overwrite_mode=null
+	send_cksm=true
+	cksm_type=null
+	cksm_value=null
+	abortRequest=false
+	print_performance=false
+	performance_test_name=null
+	repeat=1
+	dryrun=false
+	from[0]=file:////HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz
+	to=srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+
+Fri Jun 09 13:23:04 EDT 2017: In SRMClient ExpectedName: host
+Fri Jun 09 13:23:04 EDT 2017: SRMClient(httpg,srm/managerv2,GSI)
+copy_jobs is empty
+Fri Jun 09 13:23:09 EDT 2017: stopping copierjava.io.IOException: srmPrepareToPut submission failed, unexpected or failed status : SRM_FAILURE
+going to stop....
+Fri Jun 09 13:23:09 EDT 2017: Releasing all remaining file requests
+Fri Jun 09 13:23:09 EDT 2017: srmAbortFiles status code=SRM_NOT_SUPPORTED
+Fri Jun 09 13:23:09 EDT 2017: java.lang.Exception:  stopped 
+srm copy of at least one file failed or not completed
+java.io.IOException: srmPrepareToPut submission failed, unexpected or failed status : SRM_FAILURE
+	at gov.fnal.srm.util.SRMPutClientV2.start(SRMPutClientV2.java:245)
+	at gov.fnal.srm.util.SRMDispatcher.work(SRMDispatcher.java:819)
+	at gov.fnal.srm.util.SRMDispatcher.main(SRMDispatcher.java:375)
+Fri Jun 09 13:23:09 EDT 2017: stopping copier
+Fri Jun 09 13:23:09 EDT 2017: Releasing all remaining file requests
+Fri Jun 09 13:23:10 EDT 2017: srmAbortFiles status code=SRM_NOT_SUPPORTED
+srmcp exit status: 1
+Non-zero srmcp Exit status!!!
+Cleaning up failed file:
+Return code: SRM_FAILURE
+Explanation: null
+file#0 : srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz, SRM_FAILURE, "Error:/bin/rm: cannot remove `/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz': No such file or directory
+Ref-u uscms01  /bin/rm /cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz"
+
+2017-06-09T13:23:15 : Command exited with status: 23
+
+ERROR: Exception During Stage Out:
+
+2017-06-09T13:23:15 : Command exited non-zero
+Attempt 2 to stage out failed.
+Automatically retrying in 60 secs
+ Error details:
+StageOutError
+Message: 2017-06-09T13:23:15 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/sh
+REPORT_FILE=`pwd`/srm.report.$$
+srmcp -2 -report=$REPORT_FILE -retry_num=0 -request_lifetime=2400 -debug  file:////HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz  srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>&1 | tee srm.output.$$ 
+
+            EXIT_STATUS=`cat $REPORT_FILE | cut -f3 -d" "`
+            echo "srmcp exit status: $EXIT_STATUS"
+            if [[ "X$EXIT_STATUS" == "X" ]] && [[ `grep -c SRM_INVALID_PATH srm.output.$$` != 0 ]]; then
+                exit 1 # dir does not eixst
+            elif [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero srmcp Exit status!!!"
+               echo "Cleaning up failed file:"
+                srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+               exit 60311
+            fi
+
+            FILE_SIZE=`stat -c %s //HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz `
+echo "Local File Size is: $FILE_SIZE"
+
+        SRM_OUTPUT=`srmls -recursion_depth=0 -retry_num=1 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>/dev/null`
+        SRM_SIZE=`echo $SRM_OUTPUT | grep '/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz' | grep -v 'ruhex-osgce.rutgers.edu' | awk '{print $1;}'`
+        echo "SRM Size is $SRM_SIZE"
+        if [[ $SRM_SIZE == $FILE_SIZE ]]; then
+           exit 0
+        else
+           echo $SRM_OUTPUT
+           echo "ERROR: Size Mismatch between local and SE. Cleaning up failed file..."
+           srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+           exit 60311
+        fi
+        
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 213, in __call__
+    self.executeCommand(command)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 91, in executeCommand
+    raise StageOutError(msg, Command=command, ExitCode=exitCode)
+
+
+
+===> Local Stage Out Failure for file:
+======>  /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+
+===> Attempting 0 Fallback Stage Outs
+Error during stageout: StageOutFailure
+Message: Failure for local stage out:
+StageOutError
+Message: 2017-06-09T13:23:15 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/sh
+REPORT_FILE=`pwd`/srm.report.$$
+srmcp -2 -report=$REPORT_FILE -retry_num=0 -request_lifetime=2400 -debug  file:////HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz  srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>&1 | tee srm.output.$$ 
+
+            EXIT_STATUS=`cat $REPORT_FILE | cut -f3 -d" "`
+            echo "srmcp exit status: $EXIT_STATUS"
+            if [[ "X$EXIT_STATUS" == "X" ]] && [[ `grep -c SRM_INVALID_PATH srm.output.$$` != 0 ]]; then
+                exit 1 # dir does not eixst
+            elif [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero srmcp Exit status!!!"
+               echo "Cleaning up failed file:"
+                srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+               exit 60311
+            fi
+
+            FILE_SIZE=`stat -c %s //HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz `
+echo "Local File Size is: $FILE_SIZE"
+
+        SRM_OUTPUT=`srmls -recursion_depth=0 -retry_num=1 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>/dev/null`
+        SRM_SIZE=`echo $SRM_OUTPUT | grep '/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz' | grep -v 'ruhex-osgce.rutgers.edu' | awk '{print $1;}'`
+        echo "SRM Size is $SRM_SIZE"
+        if [[ $SRM_SIZE == $FILE_SIZE ]]; then
+           exit 0
+        else
+           echo $SRM_OUTPUT
+           echo "ERROR: Size Mismatch between local and SE. Cleaning up failed file..."
+           srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+           exit 60311
+        fi
+        
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 213, in __call__
+    self.executeCommand(command)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 91, in executeCommand
+    raise StageOutError(msg, Command=command, ExitCode=exitCode)
+
+Traceback (most recent call last):
+  File "WMCore.zip/WMCore/Storage/StageOutMgr.py", line 314, in localStageOut
+    impl(protocol, localPfn, pfn, options, checksums)
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 224, in __call__
+    raise ex
+StageOutError: StageOutError
+Message: 2017-06-09T13:23:15 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/sh
+REPORT_FILE=`pwd`/srm.report.$$
+srmcp -2 -report=$REPORT_FILE -retry_num=0 -request_lifetime=2400 -debug  file:////HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz  srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>&1 | tee srm.output.$$ 
+
+            EXIT_STATUS=`cat $REPORT_FILE | cut -f3 -d" "`
+            echo "srmcp exit status: $EXIT_STATUS"
+            if [[ "X$EXIT_STATUS" == "X" ]] && [[ `grep -c SRM_INVALID_PATH srm.output.$$` != 0 ]]; then
+                exit 1 # dir does not eixst
+            elif [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero srmcp Exit status!!!"
+               echo "Cleaning up failed file:"
+                srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+               exit 60311
+            fi
+
+            FILE_SIZE=`stat -c %s //HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz `
+echo "Local File Size is: $FILE_SIZE"
+
+        SRM_OUTPUT=`srmls -recursion_depth=0 -retry_num=1 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>/dev/null`
+        SRM_SIZE=`echo $SRM_OUTPUT | grep '/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz' | grep -v 'ruhex-osgce.rutgers.edu' | awk '{print $1;}'`
+        echo "SRM Size is $SRM_SIZE"
+        if [[ $SRM_SIZE == $FILE_SIZE ]]; then
+           exit 0
+        else
+           echo $SRM_OUTPUT
+           echo "ERROR: Size Mismatch between local and SE. Cleaning up failed file..."
+           srmrm -2 -retry_num=0 srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+           exit 60311
+        fi
+        
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 213, in __call__
+    self.executeCommand(command)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 91, in executeCommand
+    raise StageOutError(msg, Command=command, ExitCode=exitCode)
+
+
+
+	TargetPFN : srm://ruhex-osgce.rutgers.edu:8443/srm/v2/server?SFN=/cms/se/phedex/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	LFN : /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : srmv2
+	LineNumber : 32
+	InputPFN : cmsRun.log.tar.gz
+	Protocol : srmv2
+	ErrorNr : 0
+	ErrorType : GeneralStageOutFailure
+
+Traceback: 
+  File "WMCore.zip/WMCore/Storage/StageOutMgr.py", line 314, in localStageOut
+    impl(protocol, localPfn, pfn, options, checksums)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 224, in __call__
+    raise ex
+
+
+       <----- Stageout manager log finish
+ERROR: Unhandled exception when performing stageout of user logs archive file.
+Traceback (most recent call last):
+  File "cmscp.py", line 1613, in main
+    is_log = True, inject = transfer_logs)
+  File "cmscp.py", line 433, in perform_stageout
+    source_site, is_log, inject)
+  File "cmscp.py", line 507, in perform_local_stageout
+    if stageout_info['StageOutReport']:
+TypeError: 'NoneType' object has no attribute '__getitem__'
+
+====== Fri Jun  9 17:23:15 2017: Finished local stageout of user logs archive file (status 60318).
+Will not do local stageout of output files, because local stageout already failed for the logs archive file.
+====== Fri Jun  9 17:23:15 2017: Starting to clean local stageout area.
+There are no files to remove in local temporary storage.
+====== Fri Jun  9 17:23:15 2017: Finished to clean local stageout area.
+====== Fri Jun  9 17:23:15 2017: Starting remote stageout of user logs archive file.
+       -----> Stageout implementation log start
+2017-06-09T13:23:15 : Creating output directory...
+2017-06-09T13:23:15 : Running the stage out...
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 2: BASHOPTS: readonly variable
+Fri Jun  9 13:23:15 EDT 2017
+dlsym: /usr/lib64/libglobus_thread_pthread.so: undefined symbol: globus_extension_module
+gfal-copy exit status: 1
+Non-zero gfal-copy Exit status!!!
+Cleaning up failed file:
+Fri Jun  9 13:23:16 EDT 2017
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 9: BASH_VERSINFO: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 25: EUID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 103: PPID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 111: SHELLOPTS: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 118: UID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 2: BASHOPTS: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 9: BASH_VERSINFO: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 25: EUID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 103: PPID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 111: SHELLOPTS: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 118: UID: readonly variable
+dlsym: /usr/lib64/libglobus_thread_pthread.so: undefined symbol: globus_extension_module
+2017-06-09T13:23:16 : Command exited with status: 23
+
+ERROR: Exception During Stage Out:
+
+2017-06-09T13:23:16 : Command exited non-zero
+Attempt 1 to stage out failed.
+Automatically retrying in 60 secs
+ Error details:
+StageOutError
+Message: 2017-06-09T13:23:16 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/bash
+env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-copy -t 2400 -T 2400 -p   file:///HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz'
+            EXIT_STATUS=$?
+            echo "gfal-copy exit status: $EXIT_STATUS"
+            if [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero gfal-copy Exit status!!!"
+               echo "Cleaning up failed file:"
+                env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-rm -t 600 gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz '
+               exit 60311
+            fi
+            exit 0
+            
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+  File "cmscp.py", line 1613, in main
+    is_log = True, inject = transfer_logs)
+
+  File "cmscp.py", line 433, in perform_stageout
+    source_site, is_log, inject)
+
+  File "cmscp.py", line 507, in perform_local_stageout
+    if stageout_info['StageOutReport']:
+
+
+
+2017-06-09T13:24:16 : Running the stage out...
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 2: BASHOPTS: readonly variable
+Fri Jun  9 13:24:16 EDT 2017
+dlsym: /usr/lib64/libglobus_thread_pthread.so: undefined symbol: globus_extension_module
+gfal-copy exit status: 1
+Non-zero gfal-copy Exit status!!!
+Cleaning up failed file:
+Fri Jun  9 13:24:16 EDT 2017
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 9: BASH_VERSINFO: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 25: EUID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 103: PPID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 111: SHELLOPTS: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 118: UID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 2: BASHOPTS: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 9: BASH_VERSINFO: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 25: EUID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 103: PPID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 111: SHELLOPTS: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 118: UID: readonly variable
+dlsym: /usr/lib64/libglobus_thread_pthread.so: undefined symbol: globus_extension_module
+2017-06-09T13:24:16 : Command exited with status: 23
+
+ERROR: Exception During Stage Out:
+
+2017-06-09T13:24:16 : Command exited non-zero
+Attempt 2 to stage out failed.
+Automatically retrying in 60 secs
+ Error details:
+StageOutError
+Message: 2017-06-09T13:24:16 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/bash
+env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-copy -t 2400 -T 2400 -p   file:///HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz'
+            EXIT_STATUS=$?
+            echo "gfal-copy exit status: $EXIT_STATUS"
+            if [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero gfal-copy Exit status!!!"
+               echo "Cleaning up failed file:"
+                env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-rm -t 600 gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz '
+               exit 60311
+            fi
+            exit 0
+            
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 213, in __call__
+    self.executeCommand(command)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 91, in executeCommand
+    raise StageOutError(msg, Command=command, ExitCode=exitCode)
+
+
+
+Dashboard stageout failure parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_1', 'JobExitCode': 60311, 'StageOutReport': [{'PSN': 'unknown', 'StageOutType': 'DIRECT', 'LFN': 'gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz', 'StageOutExit': 60311, 'PNN': 'T2_CH_CERN', 'StageOutCommand': 'gfal2'}]}
+Error during direct stageout:
+StageOutFailure
+Message: Failure in direct stage out:
+StageOutError
+Message: 2017-06-09T13:24:16 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/bash
+env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-copy -t 2400 -T 2400 -p   file:///HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz'
+            EXIT_STATUS=$?
+            echo "gfal-copy exit status: $EXIT_STATUS"
+            if [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero gfal-copy Exit status!!!"
+               echo "Cleaning up failed file:"
+                env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-rm -t 600 gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz '
+               exit 60311
+            fi
+            exit 0
+            
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 213, in __call__
+    self.executeCommand(command)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 91, in executeCommand
+    raise StageOutError(msg, Command=command, ExitCode=exitCode)
+
+
+Traceback (most recent call last):
+  File "cmscp.py", line 738, in perform_direct_stageout
+    source_file, dest_pfn, options, None)
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 224, in __call__
+    raise ex
+StageOutError: StageOutError
+Message: 2017-06-09T13:24:16 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/bash
+env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-copy -t 2400 -T 2400 -p   file:///HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/cmsRun.log.tar.gz gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz'
+            EXIT_STATUS=$?
+            echo "gfal-copy exit status: $EXIT_STATUS"
+            if [[ $EXIT_STATUS != 0 ]]; then
+               echo "Non-zero gfal-copy Exit status!!!"
+               echo "Cleaning up failed file:"
+                env -i X509_USER_PROXY=$X509_USER_PROXY JOBSTARTDIR=$JOBSTARTDIR bash -c '. $JOBSTARTDIR/startup_environment.sh; date; gfal-rm -t 600 gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz '
+               exit 60311
+            fi
+            exit 0
+            
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 213, in __call__
+    self.executeCommand(command)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 91, in executeCommand
+    raise StageOutError(msg, Command=command, ExitCode=exitCode)
+
+
+
+	TargetPFN : gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+	ErrorCode : 60311
+	ModuleName : WMCore.Storage.StageOutError
+	MethodName : __init__
+	LFN : gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+	ClassInstance : None
+	FileName : WMCore.zip/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : gfal2
+	LineNumber : 32
+	InputPFN : cmsRun.log.tar.gz
+	Protocol : srmv2
+	ErrorNr : 0
+	ErrorType : GeneralStageOutFailure
+
+Traceback: 
+  File "cmscp.py", line 738, in perform_direct_stageout
+    source_file, dest_pfn, options, None)
+
+  File "WMCore.zip/WMCore/Storage/StageOutImpl.py", line 224, in __call__
+    raise ex
+
+
+       <----- Stageout implementation log finish
+Dashboard stageout failure parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_1', 'JobExitCode': 60311, 'StageOutReport': [{'PSN': 'unknown', 'StageOutType': 'DIRECT', 'LFN': 'gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz', 'StageOutExit': 60311, 'PNN': 'T2_CH_CERN', 'StageOutCommand': 'gfal2'}]}
+====== Fri Jun  9 17:24:18 2017: Finished remote stageout of user logs archive file (status 60311).
+Will not do remote stageout of output files, because remote stageout already failed for the logs archive file.
+====== Fri Jun  9 17:24:18 2017: Starting to clean remote stageout area.
+Will remove 1 file from permanent storage at T2_CH_CERN.
+Setting direct_stageout = False for file cmsRun.log.tar.gz in job report.
+Attempting to remove PFN gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz from permanent storage at T2_CH_CERN.
+       -----> Stageout implementation log start
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 2: BASHOPTS: readonly variable
+Fri Jun  9 13:24:18 EDT 2017
+dlsym: /usr/lib64/libglobus_thread_pthread.so: undefined symbol: globus_extension_module
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 9: BASH_VERSINFO: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 25: EUID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 103: PPID: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 111: SHELLOPTS: readonly variable
+/HTClocal/execute/dir_3264/glide_dV3wSs/execute/dir_31376/startup_environment.sh: line 118: UID: readonly variable
+2017-06-09T13:24:18 : Command exited with status: 1
+
+ERROR: Exception During Stage Out:
+
+2017-06-09T13:24:18 : Command exited non-zero
+       <----- Stageout implementation log finish
+WARNING: Failed to remove file (maybe the file was not transferred).
+====== Fri Jun  9 17:24:18 2017: Finished to clean remote stageout area.
+Setting stageout wrapper exit info to {'exit_acronym': 'FAILED', 'exit_code': 60318, 'exit_msg': 'CmsCpFailure\ncmscp error message follows.\nERROR: Unhandled exception when performing stageout of user logs archive file.\nTraceback (most recent call last):\n  File "cmscp.py", line 1613, in main\n    is_log = True, inject = transfer_logs)\n  File "cmscp.py", line 433, in perform_stageout\n    source_site, is_log, inject)\n  File "cmscp.py", line 507, in perform_local_stageout\n    if stageout_info[\'StageOutReport\']:\nTypeError: \'NoneType\' object has no attribute \'__getitem__\'\n'}.
+WARNING: url for transfer is not couchdb (likely an Oracle transfer). Skipping injection of transfer requests to ASO.
+Will not upload logs archive file metadata, since the logs archive file is not in a storage area.
+Job wrapper did not finish successfully (exit code 8021). Setting that same exit code for the stageout wrapper.
+Stageout wrapper finished with exit code 8021. Will report failure to Dashboard.
+Dashboard stageout failure parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_1', 'JobExitCode': 8021}
+====== Fri Jun  9 17:24:19 2017: cmscp.py FINISHING (status 8021).
+======== Stageout at Fri Jun  9 17:24:19 GMT 2017 FINISHING (short status 85) ========
+======== gWMS-CMSRunAnalysis.sh FINISHING at Fri Jun  9 17:24:19 GMT 2017 on node53.hexfarm.rutgers.edu with (short) status 85 ========
+Local time: Fri Jun  9 13:24:19 EDT 2017
+Short exit status: 85
+Cannot find condor_chirp to set up the job exit code (ignoring, that's for monitoring purposes)
+Job Running time in seconds:  1437

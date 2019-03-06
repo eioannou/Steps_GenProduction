@@ -1,0 +1,1091 @@
+======== gWMS-CMSRunAnalysis.sh STARTING at Fri Jun  9 17:55:45 GMT 2017 on se1wn14.pi.infn.it ========
+Local time : Fri Jun  9 19:55:45 CEST 2017
+Current system : Linux se1wn14.pi.infn.it 3.10.0-514.16.1.el7.x86_64 #1 SMP Wed Apr 12 15:04:24 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+Arguments are -a sandbox.tar.gz --sourceURL=https://cmsweb.cern.ch/crabcache --jobNumber=71 --cmsswVersion=CMSSW_8_0_21 --scramArch=slc6_amd64_gcc530 --inputFile=job_input_file_list_71.txt --runAndLumis=job_lumis_71.json --lheInputFiles=False --firstEvent=None --firstLumi=None --lastEvent=None --firstRun=None --seeding=AutomaticSeeding --scriptExe=None --eventsPerLumi=None --maxRuntime=-1 --scriptArgs=[] -o {}
+SCRAM_ARCH=slc6_amd64_gcc530
+======== HTCONDOR JOB SUMMARY at Fri Jun  9 17:55:45 GMT 2017 START ========
+CRAB ID: 71
+Execution site: T2_IT_Pisa
+Current hostname: se1wn14.pi.infn.it
+Output files: step3.root=step3_71.root
+==== HTCONDOR JOB AD CONTENTS START ====
+== JOB AD: RemoteSlotID = 1
+== JOB AD: CRAB_SaveLogsFlag = 1
+== JOB AD: JOB_GLIDEIN_ProcId = "0"
+== JOB AD: StreamOut = false
+== JOB AD: JOB_GLIDEIN_Entry_Name = "CMS_T2_IT_Pisa_ce0"
+== JOB AD: CRAB_ReqName = "170609_163147:aioannou_crab_privateMCProduction_Step3_M225"
+== JOB AD: use_x509userproxy = true
+== JOB AD: JOB_CMSSite = "T2_IT_Pisa"
+== JOB AD: ShadowBday = 1497030937
+== JOB AD: CRAB_SiteBlacklist = {  }
+== JOB AD: CRAB_UserRole = undefined
+== JOB AD: MyAddress = "<188.184.91.243:4080?addrs=188.184.91.243-4080&noUDP&sock=3621881_90ac_89752>"
+== JOB AD: TaskType = "Job"
+== JOB AD: ShadowVersion = "$CondorVersion: 8.5.4 May 02 2016 BuildID: 365871 $"
+== JOB AD: NumRestarts = 0
+== JOB AD: SubmitEventNotes = "DAG Node: Job71"
+== JOB AD: x509UserProxyVOName = "cms"
+== JOB AD: DAGParentNodeNames = ""
+== JOB AD: LocalUserCpu = 0.0
+== JOB AD: RemoteUserCpu = 0.0
+== JOB AD: CRAB_OutLFNDir = "/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147"
+== JOB AD: JOB_GLIDEIN_SiteWMS_Queue = "cms"
+== JOB AD: CRAB_StageoutPolicy = "local,remote"
+== JOB AD: CRAB_Workflow = "170609_163147:aioannou_crab_privateMCProduction_Step3_M225"
+== JOB AD: OVERFLOW_IT = ifthenelse(regexp("T[1,2]_IT_",DESIRED_Sites),"True",undefined)
+== JOB AD: CMSGroups = "/cms"
+== JOB AD: CurrentHosts = 1
+== JOB AD: OrigCmd = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/gWMS-CMSRunAnalysis.sh"
+== JOB AD: x509UserProxyExpiration = 1497630721
+== JOB AD: Iwd = "/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672"
+== JOB AD: NumShadowStarts = 1
+== JOB AD: JobPrio = 10
+== JOB AD: DiskUsage = 3000
+== JOB AD: CRAB_ASOTimeout = 86400
+== JOB AD: StartdPrincipal = "execute-side@matchsession/193.205.76.67"
+== JOB AD: JOB_GLIDEIN_ToDie = "1497196496"
+== JOB AD: JobRunCount = 1
+== JOB AD: MachineAttrSlotWeight0 = 1
+== JOB AD: JOB_Site = "Pisa"
+== JOB AD: WantCheckpoint = false
+== JOB AD: RequestDisk = 100000
+== JOB AD: TotalSuspensions = 0
+== JOB AD: DAGNodeName = "Job71"
+== JOB AD: RequestDisk_RAW = 1
+== JOB AD: PeriodicRemove = ( ( JobStatus =?= 5 ) && ( time() - EnteredCurrentStatus > 7 * 60 ) ) || ( ( JobStatus =?= 1 ) && ( time() - EnteredCurrentStatus > 7 * 24 * 60 * 60 ) ) || ( ( JobStatus =?= 2 ) && ( ( MemoryUsage > RequestMemory ) || ( MaxWallTimeMins * 60 < time() - EnteredCurrentStatus ) || ( DiskUsage > 20000000 ) ) ) || ( ( JobStatus =?= 1 ) && ( time() > ( x509UserProxyExpiration + 86400 ) ) )
+== JOB AD: MachineAttrMJF_JOB_HS06_JOB0 = "Unknown"
+== JOB AD: JOBGLIDEIN_CMSSite = "T2_IT_Pisa"
+== JOB AD: RemoteSysCpu = 0.0
+== JOB AD: CRAB_Retry = 3
+== JOB AD: MyType = "Job"
+== JOB AD: Environment = "CRAB_TASKMANAGER_TARBALL=local SCRAM_ARCH=slc6_amd64_gcc530 CRAB_RUNTIME_TARBALL=local"
+== JOB AD: CRAB_JobType = "analysis"
+== JOB AD: PeriodicHold = false
+== JOB AD: MachineAttrTotalSlotCpus0 = 1
+== JOB AD: JOB_GLIDEIN_Job_Max_Time = "34800"
+== JOB AD: CRAB_RestHost = "cmsweb.cern.ch"
+== JOB AD: Owner = "cms364"
+== JOB AD: OVERFLOW_UK = ifthenelse(regexp("T2_UK_London_",DESIRED_Sites),"True",undefined)
+== JOB AD: JOB_GLIDEIN_SiteWMS_JobId = "11561795"
+== JOB AD: MemoryProvisioned = 2500
+== JOB AD: RemoteHost = "glidein_31324_181086720@se1wn14.pi.infn.it"
+== JOB AD: OVERFLOW_US = ifthenelse(regexp("T[1,2]_US_",DESIRED_Sites),"True",undefined)
+== JOB AD: LastJobLeaseRenewal = 1497030938
+== JOB AD: CRAB_AdditionalOutputFiles = {  }
+== JOB AD: OnExitHold = false
+== JOB AD: CRAB_ASOURL = "https://cmsweb.cern.ch/crabserver/prod"
+== JOB AD: CRAB_NumAutomJobRetries = 2
+== JOB AD: AccountingGroup = "analysis.aioannou"
+== JOB AD: WantRemoteSyscalls = false
+== JOB AD: ExitStatus = 0
+== JOB AD: User = "cms364@cms"
+== JOB AD: JobLeaseDuration = 2400
+== JOB AD: JOB_Gatekeeper = ifthenelse(substr(Used_Gatekeeper,0,1) =!= "$",Used_Gatekeeper,ifthenelse(MATCH_GLIDEIN_Gatekeeper =!= undefined,MATCH_GLIDEIN_Gatekeeper,"Unknown"))
+== JOB AD: DESIRED_OpSyses = "LINUX"
+== JOB AD: DiskProvisioned = 43185740
+== JOB AD: CompletionDate = 0
+== JOB AD: WhenToTransferOutput = "ON_EXIT_OR_EVICT"
+== JOB AD: RequestCpus = 4
+== JOB AD: x509UserProxyFirstFQAN = "/cms/Role=NULL/Capability=NULL"
+== JOB AD: ExecutableSize = 10
+== JOB AD: CommittedSuspensionTime = 0
+== JOB AD: PreJobPrio1 = 1
+== JOB AD: GlobalJobId = "crab3@vocms0144.cern.ch#9176621.0#1497030860"
+== JOB AD: CRAB_ISB = "https://cmsweb.cern.ch/crabcache"
+== JOB AD: StreamErr = false
+== JOB AD: TransferSocket = "<188.184.91.243:4080?addrs=188.184.91.243-4080&noUDP&sock=3621881_90ac_89752>"
+== JOB AD: DAGManNodesLog = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/RunJobs.dag.nodes.log"
+== JOB AD: Rank = 0.0
+== JOB AD: JOB_GLIDEIN_SiteWMS = "LSF"
+== JOB AD: TransferInput = "CMSRunAnalysis.sh,cmscp.py,CMSRunAnalysis.tar.gz,sandbox.tar.gz,run_and_lumis.tar.gz,input_files.tar.gz"
+== JOB AD: JobUniverse = 5
+== JOB AD: PeriodicRelease = ( HoldReasonCode == 28 ) || ( HoldReasonCode == 30 ) || ( HoldReasonCode == 13 ) || ( HoldReasonCode == 6 )
+== JOB AD: CRAB_oneEventMode = 0
+== JOB AD: x509userproxy = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/826ebb0c8170c87079c6b52916e636b3d7c9c26d"
+== JOB AD: JOB_GLIDEIN_SEs = "stormfe1.pi.infn.it"
+== JOB AD: JobNotification = 0
+== JOB AD: CRAB_DBSURL = "https://cmsweb.cern.ch/dbs/prod/global/DBSReader"
+== JOB AD: MachineAttrHAS_SINGULARITY0 = false
+== JOB AD: ProcId = 0
+== JOB AD: JOB_GLIDEIN_MaxMemMBs = "2500"
+== JOB AD: DESIRED_CMSDataLocations = "T3_US_PuertoRico,T3_RU_MEPhI,T2_FI_HIP,T2_UK_SGrid_RALPP,T2_FR_GRIF_LLR,T2_UK_London_IC,T3_UK_London_QMUL,T3_TW_NTU_HEP,T3_US_Omaha,T2_KR_KNU,T2_RU_SINP,T3_US_UMD,T2_CH_CERN_AI,T3_US_Colorado,T2_CH_CSCS_HPC,T2_TH_CUNSTDA,T3_US_Kansas,T3_GR_IASA,T2_IT_Bari,T2_US_UCSD,T2_RU_IHEP,T1_RU_JINR,T3_US_JHU,T3_BY_NCPHEP,T3_US_TTU,T3_US_UCR,T3_TW_NCU,T2_CH_CSCS,T2_UA_KIPT,T2_PK_NCP,T2_RU_PNPI,T3_US_UCD,T3_CO_Uniandes,T3_KR_KNU,T2_FR_IPHC,T3_US_OSU,T3_US_TAMU,T1_US_FNAL,T2_IT_Rome,T2_UK_London_Brunel,T3_IN_PUHEP,T3_US_OSG,T3_IT_Trieste,T2_EE_Estonia,T2_IN_TIFR,T2_CN_Beijing,T2_US_Florida,T3_US_Princeton_ICSE,T3_US_Rutgers,T1_DE_KIT,T2_US_Wisconsin,T2_HU_Budapest,T2_DE_RWTH,T2_US_Vanderbilt,T3_IT_Perugia,T3_UK_SGrid_Oxford,T3_US_NU,T3_US_UMiss,T2_BR_UERJ,T2_CH_CERN,T3_MX_Cinvestav,T3_US_FNALLPC,T3_RU_FIAN,T3_US_Cornell,T2_ES_IFCA,T3_ES_Oviedo,T3_US_NotreDame,T2_DE_DESY,T1_UK_RAL,T3_HU_Debrecen,T2_US_Caltech,T3_FR_IPNL,T3_BG_UNI_SOFIA,T3_UK_London_RHUL,T3_IN_TIFRCloud,T0_CH_CERN,T3_CN_PKU,T3_US_Baylor,T2_US_Nebraska,T2_ES_CIEMAT,T3_UK_ScotGrid_GLA,T3_US_FSU,T3_KR_UOS,T2_BR_SPRACE,T1_IT_CNAF,T2_TR_METU,T2_AT_Vienna,T3_CH_CERN_CAF,T2_US_Purdue,T3_US_Rice,T2_TW_NCHC,T2_BE_UCL,T3_US_FIT,T2_UK_SGrid_Bristol,T2_PT_NCG_Lisbon,T1_ES_PIC,T2_IT_Legnaro,T2_RU_ITEP,T3_US_SDSC,T3_US_FIU,T2_RU_JINR,T2_IT_Pisa,T2_GR_Ioannina,T3_US_MIT,T3_US_UCSB,T2_MY_UPM_BIRUNI,T1_FR_CCIN2P3,T2_FR_GRIF_IRFU,T3_US_NERSC,T2_FR_CCIN2P3,T2_CH_CERN_HLT,T2_PL_Warsaw,T2_US_MIT,T2_BE_IIHE,T2_RU_INR,T2_PL_Swierk,T3_CH_PSI,T3_IT_Bologna"
+== JOB AD: PublicClaimId = "<10.1.5.14:46627>#1497026084#1#..."
+== JOB AD: ShadowIpAddr = "<188.184.91.243:4080?addrs=188.184.91.243-4080&noUDP&sock=3621881_90ac_89752>"
+== JOB AD: Used_Gatekeeper = "gridce0.pi.infn.it:8443/cream-lsf-cms"
+== JOB AD: CondorVersion = "$CondorVersion: 8.5.4 May 02 2016 BuildID: 365871 $"
+== JOB AD: Arguments = "-a sandbox.tar.gz --sourceURL=https://cmsweb.cern.ch/crabcache --jobNumber=71 --cmsswVersion=CMSSW_8_0_21 --scramArch=slc6_amd64_gcc530 --inputFile=job_input_file_list_71.txt --runAndLumis=job_lumis_71.json --lheInputFiles=False --firstEvent=None --firstLumi=None --lastEvent=None --firstRun=None --seeding=AutomaticSeeding --scriptExe=None --eventsPerLumi=None --maxRuntime=-1 --scriptArgs=[] -o {}"
+== JOB AD: ShouldTransferFiles = "YES"
+== JOB AD: Out = "_condor_stdout"
+== JOB AD: JOB_GLIDEIN_Memory = "2500"
+== JOB AD: NumJobMatches = 1
+== JOB AD: CumulativeSlotTime = 0
+== JOB AD: OnExitRemove = true
+== JOB AD: SpoolOnEvict = false
+== JOB AD: JOB_GLIDEIN_Max_Walltime = "171000"
+== JOB AD: JobAdInformationAttrs = "MATCH_EXP_JOBGLIDEIN_CMSSite, JOBGLIDEIN_CMSSite, RemoteSysCpu, RemoteUserCpu"
+== JOB AD: In = "/dev/null"
+== JOB AD: LastJobStatus = 1
+== JOB AD: CumulativeSuspensionTime = 0
+== JOB AD: ServerTime = 1497030937
+== JOB AD: CRAB_TaskWorker = "vocms052"
+== JOB AD: OrigMaxHosts = 1
+== JOB AD: TransferIn = false
+== JOB AD: CRAB_Id = "71"
+== JOB AD: JOB_GLIDEIN_Name = "gfactory_instance"
+== JOB AD: WantRemoteIO = true
+== JOB AD: OrigIwd = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0"
+== JOB AD: ImageSize = 10
+== JOB AD: ExecutableSize_RAW = 9
+== JOB AD: JobCurrentStartDate = 1497030937
+== JOB AD: x509userproxysubject = "/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou"
+== JOB AD: NumJobStarts = 0
+== JOB AD: DESIRED_Overflow_Region = strcat(ifthenelse(OVERFLOW_US =?= "True","US","none"),",",ifthenelse(OVERFLOW_IT =?= "True","IT","none"),",",ifthenelse(OVERFLOW_UK =?= "True","UK","none"))
+== JOB AD: Cmd = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/gWMS-CMSRunAnalysis.sh"
+== JOB AD: JobStartDate = 1497030937
+== JOB AD: LastMatchTime = 1497030937
+== JOB AD: JOB_GLIDEIN_CMSSite = "T2_IT_Pisa"
+== JOB AD: CoreSize = -1
+== JOB AD: TargetType = "Machine"
+== JOB AD: TransferOutput = "jobReport.json.71"
+== JOB AD: CommittedSlotTime = 0
+== JOB AD: EstimatedWallTimeMins = 1250
+== JOB AD: JobStatus = 2
+== JOB AD: x509UserProxyEmail = "aimilios.ioannou@cern.ch"
+== JOB AD: DAGManJobId = 9176382
+== JOB AD: RemoteWallClockTime = 0.0
+== JOB AD: NumSystemHolds = 0
+== JOB AD: CRAB_UserDN = "/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou"
+== JOB AD: JOB_GLIDEIN_Site = "Pisa"
+== JOB AD: AcctGroup = "analysis"
+== JOB AD: Requirements = ( ( ( target.IS_GLIDEIN =!= true ) || ( target.GLIDEIN_CMSSite =!= undefined ) ) ) && ( TARGET.Arch == "X86_64" ) && ( TARGET.OpSys == "LINUX" ) && ( TARGET.Disk >= RequestDisk ) && ( TARGET.Memory >= RequestMemory ) && ( TARGET.HasFileTransfer )
+== JOB AD: CRAB_EDMOutputFiles = { "step3.root" }
+== JOB AD: DESIRED_SITES = "T3_US_PuertoRico,T3_RU_MEPhI,T2_FI_HIP,T2_UK_SGrid_RALPP,T2_FR_GRIF_LLR,T3_US_Baylor,T3_UK_London_QMUL,T3_TW_NTU_HEP,T3_US_Omaha,T2_KR_KNU,T3_US_UMD,T2_CH_CERN_AI,T3_US_Colorado,T2_CH_CSCS_HPC,T2_IT_Bari,T2_US_UCSD,T2_RU_IHEP,T1_RU_JINR,T2_CH_CERN,T3_US_TTU,T3_US_UCR,T3_TW_NCU,T2_CH_CSCS,T2_UA_KIPT,T2_PK_NCP,T3_KR_KNU,T2_FR_IPHC,T3_US_OSU,T3_US_TAMU,T1_US_FNAL,T3_IT_Trieste,T2_IT_Rome,T2_UK_London_Brunel,T3_US_OSG,T2_US_Vanderbilt,T2_EE_Estonia,T2_IN_TIFR,T2_CN_Beijing,T2_US_Florida,T3_US_Rutgers,T1_DE_KIT,T2_US_Wisconsin,T2_HU_Budapest,T2_DE_RWTH,T3_IT_Perugia,T3_UK_SGrid_Oxford,T3_US_NERSC,T3_MX_Cinvestav,T3_US_FNALLPC,T3_US_Cornell,T2_ES_IFCA,T2_DE_DESY,T1_UK_RAL,T3_HU_Debrecen,T2_US_Caltech,T3_FR_IPNL,T3_BG_UNI_SOFIA,T3_UK_London_RHUL,T2_UK_London_IC,T2_US_Nebraska,T2_ES_CIEMAT,T3_UK_ScotGrid_GLA,T2_BR_SPRACE,T1_IT_CNAF,T2_AT_Vienna,T3_CH_CERN_CAF,T2_US_Purdue,T3_US_Rice,T2_TW_NCHC,T2_BE_UCL,T3_US_FIT,T2_UK_SGrid_Bristol,T2_PT_NCG_Lisbon,T1_ES_PIC,T2_IT_Legnaro,T3_US_SDSC,T3_US_FIU,T2_RU_JINR,T2_IT_Pisa,T2_GR_Ioannina,T3_US_UCSB,T1_FR_CCIN2P3,T2_FR_GRIF_IRFU,T3_US_UMiss,T2_FR_CCIN2P3,T2_CH_CERN_HLT,T2_US_MIT,T2_BE_IIHE,T2_PL_Swierk,T3_IT_Bologna"
+== JOB AD: NumCkpts = 0
+== JOB AD: StartdIpAddr = "<10.1.5.14:46627?CCBID=188.184.83.197:9700%3faddrs%3d188.184.83.197-9700#2546363&addrs=10.1.5.14-46627&noUDP>"
+== JOB AD: CMS_ALLOW_OVERFLOW = "True"
+== JOB AD: RequestMemory_RAW = 2000
+== JOB AD: DiskUsage_RAW = 2782
+== JOB AD: DAGManNodesMask = "0,1,2,4,5,7,9,10,11,12,13,16,17,24,27"
+== JOB AD: CRAB_localOutputFiles = "step3.root=step3_71.root"
+== JOB AD: MaxHosts = 1
+== JOB AD: CRAB_UserHN = "aioannou"
+== JOB AD: CRAB_SubmitterIpAddr = "188.184.93.47"
+== JOB AD: JOB_GLIDEIN_SiteWMS_Slot = "Unknown"
+== JOB AD: CondorPlatform = "$CondorPlatform: x86_64_RedHat6 $"
+== JOB AD: CRAB_OutTempLFNDir = "/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147"
+== JOB AD: AcctGroupUser = "cms364"
+== JOB AD: ImageSize_RAW = 9
+== JOB AD: JOB_GLIDECLIENT_Name = "CMSG-v1_0.main"
+== JOB AD: LocalSysCpu = 0.0
+== JOB AD: LastSuspensionTime = 0
+== JOB AD: CpusProvisioned = 1
+== JOB AD: CRAB_ParentId = "71"
+== JOB AD: UserLog = "/data/srv/glidecondor/condor_local/spool/6382/0/cluster9176382.proc0.subproc0/job_log"
+== JOB AD: CRAB_TransferOutputs = 1
+== JOB AD: CRAB_DataBlock = "UserFilesFakeBlock"
+== JOB AD: JOB_GLIDEIN_Factory = "OSGGOC"
+== JOB AD: TransferInputSizeMB = 2
+== JOB AD: MachineAttrCpus0 = 1
+== JOB AD: CRAB_RestURInoAPI = "/crabserver/prod"
+== JOB AD: CRAB_JobArch = "slc6_amd64_gcc530"
+== JOB AD: QDate = 1497030858
+== JOB AD: CRAB_PublishDBSURL = "https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter"
+== JOB AD: CRAB_PublishGroupName = 0
+== JOB AD: x509UserProxyFQAN = "/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou,/cms/Role=NULL/Capability=NULL"
+== JOB AD: Err = "_condor_stderr"
+== JOB AD: CRAB_SiteWhitelist = {  }
+== JOB AD: CRAB_Destination = "gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/log/cmsRun_71.log.tar.gz, gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/step3_71.root"
+== JOB AD: CRAB_RetryOnASOFailures = 1
+== JOB AD: CRAB_TFileOutputFiles = {  }
+== JOB AD: accounting_group = analysis
+== JOB AD: PostJobPrio1 = -1497025934
+== JOB AD: ExitBySignal = false
+== JOB AD: CRAB_UserGroup = undefined
+== JOB AD: PostJobPrio2 = 3
+== JOB AD: PeriodicRemoveReason = ifThenElse(time() - EnteredCurrentStatus > 7 * 24 * 60 * 60 && isUndefined(MemoryUsage),"Removed due to idle time limit",ifThenElse(time() > x509UserProxyExpiration,"Removed job due to proxy expiration",ifThenElse(MemoryUsage > RequestMemory,"Removed due to memory use",ifThenElse(MaxWallTimeMins * 60 < time() - EnteredCurrentStatus,"Removed due to wall clock limit",ifThenElse(DiskUsage > 20000000,"Removed due to disk usage","Removed due to job being held")))))
+== JOB AD: MachineAttrDIRACBenchmark0 = 7.60340632606
+== JOB AD: BufferBlockSize = 32768
+== JOB AD: ClusterId = 9176621
+== JOB AD: CRAB_AsyncDest = "T2_CH_CERN"
+== JOB AD: UidDomain = "cms"
+== JOB AD: CRAB_PublishName = "crab_privateMCProduction_Step3_M225-00000000000000000000000000000000"
+== JOB AD: DelegatedProxyExpiration = 1497630721
+== JOB AD: CRAB_Publish = 0
+== JOB AD: ProvisionedResources = "Cpus Memory Disk Swap"
+== JOB AD: RequestMemory = 2000
+== JOB AD: EnteredCurrentStatus = 1497030937
+== JOB AD: JOB_GLIDEIN_ToRetire = "1497161696"
+== JOB AD: BufferSize = 524288
+== JOB AD: CRAB_JobSW = "CMSSW_8_0_21"
+== JOB AD: JOB_GLIDEIN_Schedd = "schedd_glideins7@glidein.grid.iu.edu"
+== JOB AD: MaxWallTimeMins = ( JobStatus =?= 1 ) ? EstimatedWallTimeMins : 1250
+== JOB AD: LeaveJobInQueue = false
+== JOB AD: EncryptExecuteDirectory = false
+== JOB AD: NumCkpts_RAW = 0
+== JOB AD: DESIRED_Archs = "X86_64"
+== JOB AD: MinHosts = 1
+== JOB AD: DESIRED_OpSysMajorVers = "6"
+== JOB AD: OVERFLOW_CHECK = ifthenelse(MATCH_GLIDEIN_CMSSite =!= undefined,ifthenelse(stringListMember(MATCH_GLIDEIN_CMSSite,DESIRED_Sites),false,true),false)
+== JOB AD: JOB_GLIDEIN_ClusterId = "4349967"
+== JOB AD: CRAB_ASODB = "filetransfers"
+== JOB AD: CRAB_PrimaryDataset = "CRAB_UserFiles"
+== JOB AD: NiceUser = false
+== JOB AD: DESIRED_CMSDataset = undefined
+== JOB AD: RootDir = "/"
+== JOB AD: CommittedTime = 0
+==== HTCONDOR JOB AD CONTENTS FINISH ====
+======== HTCONDOR JOB SUMMARY at Fri Jun  9 17:55:45 GMT 2017 FINISH ========
+======== PROXY INFORMATION START at Fri Jun  9 17:55:45 GMT 2017 ========
+subject   : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou/CN=738582671/CN=1772214399/CN=983435492/CN=1199660447/CN=482367967/CN=1945439431
+issuer    : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou/CN=738582671/CN=1772214399/CN=983435492/CN=1199660447/CN=482367967
+identity  : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou
+type      : RFC3820 compliant limited proxy
+strength  : 1024
+path      : /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/826ebb0c8170c87079c6b52916e636b3d7c9c26d
+timeleft  : 166:36:14
+key usage : Digital Signature, Key Encipherment
+=== VO cms extension information ===
+VO        : cms
+subject   : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=aioannou/CN=732460/CN=Aimilios Ioannou
+issuer    : /DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch
+attribute : /cms/Role=NULL/Capability=NULL
+timeleft  : 166:36:16
+uri       : lcg-voms2.cern.ch:15002
+
+======== PROXY INFORMATION FINISH at Fri Jun  9 17:55:46 GMT 2017 ========
+======== CMSRunAnalysis.sh at Fri Jun  9 17:55:46 GMT 2017 STARTING ========
+======== CMSRunAnalysis.sh STARTING at Fri Jun  9 17:55:46 GMT 2017 ========
+Local time : Fri Jun  9 19:55:46 CEST 2017
+Current system : Linux se1wn14.pi.infn.it 3.10.0-514.16.1.el7.x86_64 #1 SMP Wed Apr 12 15:04:24 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+==== CMSSW pre-execution environment bootstrap STARTING ====
++ '[' -f /cvmfs/cms.cern.ch/cmsset_default.sh ']'
++ echo 'LCG style'
+LCG style
++ set +x
++ declare -a VERSIONS
++ VERSIONS=($(ls $VO_CMS_SW_DIR/$SCRAM_ARCH/external/python | egrep '2.[67]'))
+++ ls /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python
+++ egrep '2.[67]'
++ PY_PATH=/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python
++ echo 'python version: ' 2.7.11-giojec
+python version:  2.7.11-giojec
++ set +x
+==== CMSSW pre-execution environment bootstrap FINISHING at Fri Jun  9 17:55:46 GMT 2017 ====
+==== Python discovery STARTING ====
+Python found in /cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec
+I found python at..
+/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/bin/python
+==== Python discovery FINISHING at Fri Jun  9 17:55:46 GMT 2017 ====
+======== Current environment dump STARTING ========
+== ENV: GLIDEIN_SEs=stormfe1.pi.infn.it
+== ENV: GLIDEIN_ResourceName=INFN-PISA
+== ENV: VO_GRIDIT_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: MANPATH=/cvmfs/cms.cern.ch/share/man:/afs/pi.infn.it/pisw/LSF/7.0/man:/opt/glite/share/man::
+== ENV: _CONDOR_JOB_PIDS=
+== ENV: LSB_EXEC_CLUSTER=infn-pisa
+== ENV: CONDOR_PRIVATE_SHARED_PORT_COOKIE=408f2db1b2817a4fb7a4078c51c7fc25db7682fa4b3fbc3c831663ec832147d8
+== ENV: GRIDMAP=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/grid-mapfile
+== ENV: HOSTNAME=se1wn14.pi.infn.it
+== ENV: GLIDEIN_REQUIRE_GLEXEC_USE=False
+== ENV: REQUIRED_OS=
+== ENV: VO_CALET_SW_DIR=/afs/pi.infn.it/grid_exp_sw/calet
+== ENV: LSF_LOGDIR=/var/log/lsf
+== ENV: LSF_LIM_API_NTRIES=1
+== ENV: VO_ALICE_SW_DIR=/afs/pi.infn.it/grid_exp_sw/alice
+== ENV: VO_EUMED_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: SHELL=/bin/bash
+== ENV: GRID_ENV_LOCATION=/usr/libexec
+== ENV: LSB_BATCH_JID=11561795
+== ENV: VO_ESR_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: HISTSIZE=1000
+== ENV: LSF_TOP=/usr/local/lsf
+== ENV: TMPDIR=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: VO_EUCHINA_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_THEOPHYS_SW_DIR=/afs/pi.infn.it/grid_exp_sw/theophys
+== ENV: VO_OPS_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: LSB_TRAPSIGS=trap
+== ENV: #
+== ENV: 15
+== ENV: 10
+== ENV: 12
+== ENV: 2
+== ENV: 1
+== ENV: GLIDECLIENT_Signature=d10931e33d35ef9eab2de3f3f2949cc181d2a8f0
+== ENV: CVSROOT=:gserver:cmssw.cvs.cern.ch:/local/reps/CMSSW
+== ENV: GT_PROXY_MODE=old
+== ENV: __delegationProxyCertSandboxPath=gsiftp://gridce0.pi.infn.it/var/cream_sandbox/cmsplt/CN_cmspilot02_vocms080_cern_ch_OU_computers_DC_cern_DC_ch_cms_Role_pilot_Capability_NULL_cmsplt17/proxy/1496570335_341694_10829648562548
+== ENV: LS_JOBPID=31067
+== ENV: _CONDOR_SCRATCH_DIR=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: LSB_JOBRES_CALLBACK=34826@se1wn14
+== ENV: VO_BABAR_SW_DIR=/afs/pi.infn.it/grid_exp_sw/babar
+== ENV: LSB_JOB_EXECUSER=cmsplt17
+== ENV: QTDIR=/usr/lib64/qt-3.3
+== ENV: VO_NA48_SW_DIR=/afs/pi.infn.it/grid_exp_sw/na48
+== ENV: LSB_JOBID=11561795
+== ENV: LSF_SERVERDIR=/usr/local/lsf/etc
+== ENV: X509_CERT_DIR=/etc/grid-security/certificates/
+== ENV: QTINC=/usr/lib64/qt-3.3/include
+== ENV: LSB_JOBRES_PID=31067
+== ENV: VO_GLAST_ORG_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: GLITE_WMS_LOCATION=/usr
+== ENV: SCRAM_ARCH=slc6_amd64_gcc530
+== ENV: CMS_VALIDATION_FRONTIER=0
+== ENV: GLIDEIN_Max_Idle=1200
+== ENV: VO_CDF_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_MAGIC_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_INFNGRID_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: LSB_JOBNAME=cream_201661874
+== ENV: GRIDMAPDIR=/etc/grid-security/gridmapdir
+== ENV: BSUB_BLOCK_EXEC_HOST=
+== ENV: VO_BABAR_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_CALET_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_ARGO_SW_DIR=/afs/pi.infn.it/grid_exp_sw/argo
+== ENV: LSF_LIBDIR=/usr/local/lsf/lib
+== ENV: VO_ENEA_SW_DIR=/afs/pi.infn.it/grid_exp_sw/enea
+== ENV: GLIDEIN_REQUIRE_VOMS=False
+== ENV: JOBSTARTDIR=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: _CHIRP_DELAYED_UPDATE_PREFIX=Chirp*
+== ENV: USER=cmsplt17
+== ENV: VO_BELLE_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: CRAB_Retry=3
+== ENV: CONDOR_PARENT_ID=se1wn14:29672:1497030939
+== ENV: VO_VIRGO_SW_DIR=/afs/pi.infn.it/grid_exp_sw/virgo
+== ENV: TEMP=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: LD_LIBRARY_PATH=/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/sqlite/3.12.2/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/libffi/3.2.1/lib64:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gdbm/1.10/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/readline/6.3/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/ncurses/6.0-20151128-ikhhed/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/db6/6.0.30/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/expat/2.1.0/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/openssl/1.0.2d/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/bz2lib/1.0.6/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/zlib/1.2.8/lib:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gcc/5.3.0/lib64:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gcc/5.3.0/lib:/usr/local/lsf/lib
+== ENV: OSG_SINGULARITY_IMAGE=
+== ENV: GLIDEIN_Entry_Name=CMS_T2_IT_Pisa_ce0
+== ENV: GRID_JOBID=N/A
+== ENV: SBD_KRB5CCNAME_VAL=
+== ENV: BATCH_SYSTEM=HTCondor
+== ENV: VO_ARGO_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_CMS_SW_DIR=/cvmfs/cms.cern.ch
+== ENV: VO_ENEA_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_DTEAM_SW_DIR=/afs/pi.infn.it/grid_exp_sw/dteam
+== ENV: LCG_LOCATION=/usr
+== ENV: GLIDEIN_Name=gfactory_instance
+== ENV: LSB_EEXEC_REAL_UID=
+== ENV: OSG_SINGULARITY_IMAGE_DEFAULT=
+== ENV: _CONDOR_CHIRP_CONFIG=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/.chirp.config
+== ENV: HOSTTYPE=X86_64
+== ENV: VO_MAGIC_SW_DIR=/afs/pi.infn.it/grid_exp_sw/magic
+== ENV: VO_CDF_SW_DIR=/afs/pi.infn.it/grid_exp_sw/cdf
+== ENV: VO_INFNGRID_SW_DIR=/afs/pi.infn.it/grid_exp_sw/infngrid
+== ENV: VO_PAMELA_SW_DIR=/afs/pi.infn.it/grid_exp_sw/pamela
+== ENV: VO_COMPCHEM_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_LHCB_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: LS_EXEC_T=START
+== ENV: GLIDEIN_Entry_Signature=35d1a9b4929dd8aea943162c78eb07fc66aaa245
+== ENV: VO_PLANCK_SW_DIR=/afs/pi.infn.it/grid_exp_sw/planck
+== ENV: VO_OPS_SW_DIR=/afs/pi.infn.it/grid_exp_sw/ops
+== ENV: CONDOR_PROCD_ADDRESS_BASE=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/log/procd_address
+== ENV: VO_ATLAS_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: GLITE_WMS_JOBID=N/A
+== ENV: LSF_VERSION=23
+== ENV: LS_SUBCWD=/home/grid/cmsplt17/
+== ENV: LSB_HOSTS=se1wn14
+== ENV: LSB_DJOB_RU_INTERVAL=30
+== ENV: LSB_UNIXGROUP_INT=cmsplt
+== ENV: VO_EUCHINA_SW_DIR=/afs/pi.infn.it/grid_exp_sw/euchina
+== ENV: GLIDECLIENT_Name=CMSG-v1_0.main
+== ENV: GLIDEIN_Site=Pisa
+== ENV: LSB_DJOB_HB_INTERVAL=30
+== ENV: LSB_JOBFILENAME=/home/grid/cmsplt17/.lsbatch/1496954767.11561795
+== ENV: VO_EUMED_SW_DIR=/afs/pi.infn.it/grid_exp_sw/eumed
+== ENV: MAIL=/var/spool/mail/cmsplt17
+== ENV: VO_BIOMED_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: LSB_JOBINDEX=0
+== ENV: PATH=/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/python/2.7.11-giojec/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/sqlite/3.12.2/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gdbm/1.10/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/ncurses/6.0-20151128-ikhhed/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/db6/6.0.30/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/expat/2.1.0/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/openssl/1.0.2d/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/bz2lib/1.0.6/bin:/cvmfs/cms.cern.ch/slc6_amd64_gcc530/external/gcc/5.3.0/bin:/opt/lcg/bin:/cvmfs/cms.cern.ch/common:/cvmfs/cms.cern.ch/bin:/usr/lib64/qt-3.3/bin:/usr/local/lsf/etc:/usr/local/lsf/bin:/bin:/usr/bin/:/usr/mbin:/local/bin:/usr/local:/usr/ucb:/usr/local/sbin:/usr/sbin:/sbin:/home/grid/cmsplt17/bin
+== ENV: HOLD_GRACE_TIME=0
+== ENV: _CONDOR_ANCESTOR_5877=5880:1497026083:1153013608
+== ENV: CMS_PATH=/cvmfs/cms.cern.ch
+== ENV: LSB_EXIT_PRE_ABORT=99
+== ENV: LSB_JOBEXIT_STAT=0
+== ENV: VO_DTEAM_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_CMS_DEFAULT_SE=stormfe1.pi.infn.it
+== ENV: CONDOR_CONFIG=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/condor_config
+== ENV: VO_BELLE_SW_DIR=/cvmfs/belle.cern.ch/sl6
+== ENV: PWD=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: SITE_GIIS_URL=gridbdii0.pi.infn.it
+== ENV: CRAB_Id=71
+== ENV: VO_ESR_SW_DIR=/afs/pi.infn.it/grid_exp_sw/esr
+== ENV: X509_USER_CERT=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/hostcert.pem
+== ENV: _CONDOR_WRAPPER_ERROR_FILE=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/.job_wrapper_failure
+== ENV: _CONDOR_ANCESTOR_5880=29672:1497030938:3039464385
+== ENV: LANG=C
+== ENV: GLEXEC_CLIENT_CERT=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672.condor/826ebb0c8170c87079c6b52916e636b3d7c9c26d
+== ENV: MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+== ENV: GLIDEIN_Country=IT
+== ENV: LSB_CHKFILENAME=/home/grid/cmsplt17/.lsbatch/1496954767.11561795
+== ENV: VO_GLAST_ORG_SW_DIR=/cvmfs/glast.egi.eu
+== ENV: GLIDEIN_Gatekeeper=gridce0.pi.infn.it:8443/cream-lsf-cms
+== ENV: LSB_DJOB_HOSTFILE=/home/grid/cmsplt17/.lsbatch/1496954767.11561795.hostfile
+== ENV: LOADEDMODULES=
+== ENV: _CONDOR_SLOT=
+== ENV: LSB_JOB_STARTER=/usr/local/lsf/work/infn-pisa/scripts/lsf_grid_start.sh
+== ENV: MYPROXY_SERVER=myproxy.cnaf.infn.it
+== ENV: GLIDEIN_Tmp_Dir=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/tmp
+== ENV: CRAB_TASKMANAGER_TARBALL=local
+== ENV: OSG_SINGULARITY_PATH=
+== ENV: GLITE_WMS_SEQUENCE_CODE=
+== ENV: GLIDEIN_GridType=cream
+== ENV: GLIDEIN_Factory=OSGGOC
+== ENV: GLIDEIN_CLAIM_WORKLIFE_DYNAMIC=cpus*(6*3600)
+== ENV: GLIDEIN_Proxy_URL=None
+== ENV: GLIDECLIENT_Group=main
+== ENV: LSB_DJOB_NUMPROC=1
+== ENV: LSF_BINDIR=/usr/local/lsf/bin
+== ENV: HISTCONTROL=ignoredups
+== ENV: GLIDEIN_Expose_Grid_Env=True
+== ENV: _CONDOR_EXECUTE=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute
+== ENV: CE_ID=gridce0.pi.infn.it:8443/cream-lsf-cms
+== ENV: VO_LHCB_SW_DIR=/cvmfs/lhcb.cern.ch
+== ENV: GLEXEC_LOCATION=/usr
+== ENV: HOME=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: GLITE_LOCATION_VAR=/var
+== ENV: HAS_CVMFS_cms_cern_ch=True
+== ENV: VO_ALICE_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: CREAM_JOBID=https://gridce0.pi.infn.it:8443/CREAM201661874
+== ENV: SHLVL=9
+== ENV: GLIDECLIENT_Group_Signature=759883ebe2364e8e132fd430ce827674a54ae258
+== ENV: GLIDEIN_Max_Tail=1200
+== ENV: __copy_proxy_min_retry_wait=60
+== ENV: _CONDOR_MACHINE_AD=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/.machine.ad
+== ENV: java_options=-Xms128m
+== ENV: -Xmx512m
+== ENV: GSI_AUTHZ_CONF=/dev/null
+== ENV: __delegationTimeSlot=3600
+== ENV: X509_USER_PROXY=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/826ebb0c8170c87079c6b52916e636b3d7c9c26d
+== ENV: SLOTS_LAYOUT=fixed
+== ENV: VO_SUPERBVO_ORG_SW_DIR=/afs/pi.infn.it/grid_exp_sw/superb
+== ENV: LSB_ACCT_FILE=/tmp/.1496954767.11561795.acct
+== ENV: GLIDEIN_Signature=c3318215fa3fc017419d5061d00088eb1cee5eed
+== ENV: LSB_SUB_HOST=gridce0
+== ENV: GLIDEIN_CMSSite=T2_IT_Pisa
+== ENV: GLITE_ENV_SET=TRUE
+== ENV: VO_VIRGO_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: GLIDEIN_Schedd=schedd_glideins7@glidein.grid.iu.edu
+== ENV: LSFUSER=cmsplt17
+== ENV: DCACHE_RA_BUFFER=32768
+== ENV: GLIDEIN_REQUIRED_OS=rhel6
+== ENV: LSB_MCPU_HOSTS=se1wn14
+== ENV: 1
+== ENV: LSB_QUEUE=cms
+== ENV: VO_PAMELA_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: LCG_GFAL_INFOSYS=egee-bdii.cnaf.infn.it:2170
+== ENV: GLIDEIN_Glexec_Use=OPTIONAL
+== ENV: VO_COMPCHEM_SW_DIR=/afs/pi.infn.it/grid_exp_sw/compchem
+== ENV: TMP=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: LSB_OUTPUTFILE=/dev/null
+== ENV: LOGNAME=cmsplt17
+== ENV: CVS_RSH=ssh
+== ENV: HAS_SINGULARITY=false
+== ENV: QTLIB=/usr/lib64/qt-3.3/lib
+== ENV: CVMFS_cms_cern_ch_REVISION=35645
+== ENV: VO_SUPERBVO_ORG_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_GRIDIT_SW_DIR=/afs/pi.infn.it/grid_exp_sw/gridit
+== ENV: GLIDEIN_Monitoring_Enabled=False
+== ENV: XLSF_UIDDIR=/usr/local/lsf/lib/uid
+== ENV: VO_BIOMED_SW_DIR=/cvmfs/biomed.egi.eu
+== ENV: GLIDEIN_ProcId=0
+== ENV: GLIDEIN_ClusterId=4349967
+== ENV: MODULESHOME=/usr/share/Modules
+== ENV: LESSOPEN=||/usr/bin/lesspipe.sh
+== ENV: %s
+== ENV: OMP_NUM_THREADS=1
+== ENV: VO_NA48_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: _CONDOR_JOB_AD=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/.job.ad
+== ENV: OSG_SINGULARITY_AUTOLOAD=1
+== ENV: __delegationProxyCertSandboxPathTmp=/tmp/1496570335_341694_10829648562548201661874
+== ENV: VO_THEOPHYS_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: VO_ATLAS_SW_DIR=/cvmfs/atlas.cern.ch/repo/sw
+== ENV: LSB_EEXEC_REAL_GID=
+== ENV: GLITE_LOCATION=/usr
+== ENV: LSF_ENVDIR=/usr/local/lsf/conf
+== ENV: GLIDEIN_LOCAL_TMP_DIR=/tmp/glide_cmsplt17_680alk
+== ENV: VO_PLANCK_DEFAULT_SE=gridsrm.pi.infn.it
+== ENV: CRAB_RUNTIME_TARBALL=local
+== ENV: OSG_SINGULARITY_BIND_CVMFS=0
+== ENV: _CONDOR_JOB_IWD=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== ENV: SITE_NAME=INFN-PISA
+== ENV: X509_USER_KEY=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/hostkey.pem
+== ENV: G_BROKEN_FILENAMES=1
+== ENV: GLITE_WMS_LOG_DESTINATION=gridce0.pi.infn.it
+== ENV: EDG_WL_NOSETPGRP=1
+== ENV: CONDOR_PROCD_ADDRESS=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/log/procd_address
+== ENV: BASH_FUNC_module()=()
+== ENV: {
+== ENV: eval
+== ENV: `/usr/bin/modulecmd
+== ENV: sh
+== ENV: $*`
+== ENV: }
+== ENV: _=/bin/env
+======== Current environment dump FINISHING ========
+======== Tarball initialization STARTING at Fri Jun  9 17:55:46 GMT 2017 ========
++ [[ X == \X ]]
++ [[ local == \l\o\c\a\l ]]
++ tar xvzmf CMSRunAnalysis.tar.gz
+WMCore.zip
+TweakPSet.py
+CMSRunAnalysis.py
+ApmonIf.py
+DashboardAPI.py
+Logger.py
+ProcInfo.py
+apmon.py
+ServerUtilities.py
+CMSGroupMapper.py
+RESTInteractions.py
+DashboardFailure.sh
+libcurl.so.4
+++ pwd
+++ pwd
++ export PYTHONPATH=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/CRAB3.zip:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/WMCore.zip:
++ PYTHONPATH=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/CRAB3.zip:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/WMCore.zip:
++ set +x
+======== Tarball initialization FINISHING at Fri Jun  9 17:55:46 GMT 2017 ========
+==== Local directory contents dump STARTING ====
+PWD: /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+== DIR: 826ebb0c8170c87079c6b52916e636b3d7c9c26d
+== DIR: ApmonIf.py
+== DIR: CMSGroupMapper.py
+== DIR: CMSRunAnalysis.py
+== DIR: CMSRunAnalysis.sh
+== DIR: CMSRunAnalysis.tar.gz
+== DIR: DashboardAPI.py
+== DIR: DashboardFailure.sh
+== DIR: Logger.py
+== DIR: ProcInfo.py
+== DIR: RESTInteractions.py
+== DIR: ServerUtilities.py
+== DIR: TweakPSet.py
+== DIR: WMCore.zip
+== DIR: _condor_stderr
+== DIR: _condor_stdout
+== DIR: apmon.py
+== DIR: cmscp.py
+== DIR: condor_exec.exe
+== DIR: input_files.tar.gz
+== DIR: jobReport.json
+== DIR: jobReport.json.71
+== DIR: libcurl.so.4
+== DIR: run_and_lumis.tar.gz
+== DIR: sandbox.tar.gz
+== DIR: startup_environment.sh
+==== Local directory contents dump FINISHING ====
+======== CMSRunAnalysis.py STARTING at Fri Jun  9 17:55:46 GMT 2017 ========
+Now running the CMSRunAnalysis.py job in /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672...
+++ pwd
++ python CMSRunAnalysis.py -r /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672 -a sandbox.tar.gz --sourceURL=https://cmsweb.cern.ch/crabcache --jobNumber=71 --cmsswVersion=CMSSW_8_0_21 --scramArch=slc6_amd64_gcc530 --inputFile=job_input_file_list_71.txt --runAndLumis=job_lumis_71.json --lheInputFiles=False --firstEvent=None --firstLumi=None --lastEvent=None --firstRun=None --seeding=AutomaticSeeding --scriptExe=None --eventsPerLumi=None --maxRuntime=-1 '--scriptArgs=[]' -o '{}' --oneEventMode=0
+==== CMSRunAnalysis.py STARTING at Fri Jun  9 17:55:46 2017 ====
+Local time : Fri Jun  9 19:55:46 2017
+Dashboard early startup params: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_3', 'SyncCE': 'gridce0.pi.infn.it', 'OverflowFlag': 0, 'SyncSite': 'T2_IT_Pisa', 'SyncGridJobId': 'https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225', 'WNHostName': 'se1wn14.pi.infn.it'}
+==== Parameters Dump at Fri Jun  9 17:55:47 2017 ===
+archiveJob:     sandbox.tar.gz
+runDir:         /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672
+sourceURL:      https://cmsweb.cern.ch/crabcache
+jobNumber:      71
+cmsswVersion:   CMSSW_8_0_21
+scramArch:      slc6_amd64_gcc530
+inputFile       job_input_file_list_71.txt
+outFiles:       {}
+runAndLumis:    job_lumis_71.json
+lheInputFiles:  False
+firstEvent:     None
+firstLumi:      None
+eventsPerLumi:  None
+lastEvent:      None
+firstRun:       None
+seeding:        AutomaticSeeding
+userFiles:      None
+oneEventMode:   0
+scriptExe:      None
+scriptArgs:     []
+maxRuntime:     -1
+===================
+==== Sandbox preparation STARTING at Fri Jun  9 17:55:47 2017 ====
+Sandbox sandbox.tar.gz already exists, skipping
+lib/
+lib/slc6_amd64_gcc530/
+biglib/
+biglib/slc6_amd64_gcc530/
+PSet.py
+PSet.pkl
+PSetDump.py
+==== Sandbox preparation FINISHING at Fri Jun  9 17:55:47 2017 ====
+==== WMCore filesystem preparation STARTING at Fri Jun  9 17:55:47 2017 ====
+==== WMCore filesystem preparation FINISHING at Fri Jun  9 17:55:47 2017 ====
+Dashboard startup parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_3', 'WNHostName': 'se1wn14.pi.infn.it', 'ExeStart': 'cmsRun'}
+==== CMSSW Stack Execution STARTING at Fri Jun  9 17:55:47 2017 ====
+==== SCRAM Obj CREATED at Fri Jun  9 17:55:47 2017 ====
+lib/
+lib/slc6_amd64_gcc530/
+biglib/
+biglib/slc6_amd64_gcc530/
+PSet.py
+PSet.pkl
+PSetDump.py
+==== CMSSW JOB Execution started at Fri Jun  9 17:55:50 2017 ====
+2017-06-09 17:55:50,422:INFO:Scram:    Invoking command: python -c 'from PSetTweaks.WMTweak import makeTweak;config = __import__("WMTaskSpace.cmsRun.PSet", globals(), locals(), ["process"], -1);tweakJson = makeTweak(config.process).jsondictionary();print tweakJson["process"]["outputModules_"]'
+2017-06-09 17:55:56,309:INFO:CMSSW:User files are 
+2017-06-09 17:55:56,309:INFO:CMSSW:User sandboxes are sandbox.tar.gz
+2017-06-09 17:55:56,309:INFO:CMSSW:CMSSW configured for 1 cores and 0 event streams
+2017-06-09 17:55:56,309:INFO:CMSSW:Executing CMSSW step
+2017-06-09 17:55:56,309:INFO:CMSSW:Runing SCRAM
+2017-06-09 17:55:57,133:INFO:CMSSW:Running PRE scripts
+2017-06-09 17:55:57,133:INFO:CMSSW:RUNNING SCRAM SCRIPTS
+2017-06-09 17:55:57,139:INFO:Scram:    Invoking command: python /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/TweakPSet.py --location=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672 --inputFile='job_input_file_list_71.txt' --runAndLumis='job_lumis_71.json' --firstEvent=None --lastEvent=None --firstLumi=None --firstRun=None --seeding=AutomaticSeeding --lheInputFiles=False --oneEventMode=0 --eventsPerLumi=None --maxRuntime=-1 
+
+2017-06-09 17:56:07,780:INFO:CMSSW:Executing CMSSW. args: ['/bin/bash', '/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']
+2017-06-09 18:00:59,881:CRITICAL:CMSSW:Error running cmsRun
+{'arguments': ['/bin/bash', '/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']}
+Return code: 85
+
+==== CMSSW Stack Execution FAILED at Fri Jun  9 18:00:59 2017 ====
+======== CMSSW OUTPUT STARTING ========
+NOTICE: lines longer than 3000 characters will be truncated
+== CMSSW: Beginning CMSSW wrapper script
+== CMSSW:  slc6_amd64_gcc530 scramv1 CMSSW
+== CMSSW: Performing SCRAM setup...
+== CMSSW: Completed SCRAM setup
+== CMSSW: Retrieving SCRAM project...
+== CMSSW: Untarring  /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/sandbox.tar.gz
+== CMSSW: Completed SCRAM project
+== CMSSW: Executing CMSSW
+== CMSSW: cmsRun  -j FrameworkJobReport.xml PSet.py
+== CMSSW: %MSG-i ThreadSetup:  (NoModuleName) 09-Jun-2017 19:56:13 CEST pre-events
+== CMSSW: setting # threads 1
+== CMSSW: %MSG
+== CMSSW: 09-Jun-2017 19:56:26 CEST  Initiating request to open file file:/gpfs/ddn/srm/cms/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: 09-Jun-2017 19:56:27 CEST  Fallback request to file root://xrootd-cms.infn.it:1194//store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: %MSG-w XrdAdaptor:  file_open 09-Jun-2017 19:56:30 CEST pre-events
+== CMSSW: Data is served from cern.ch instead of original site T2_FR_GRIF_LLR
+== CMSSW: %MSG
+== CMSSW: 09-Jun-2017 19:56:33 CEST  Successfully opened file root://xrootd-cms.infn.it:1194//store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: Begin processing the 1st record. Run 1, Event 88809, LumiSection 889 at 09-Jun-2017 20:00:02.664 CEST
+== CMSSW: ----- Begin Fatal Exception 09-Jun-2017 20:00:55 CEST-----------------------
+== CMSSW: An exception of category 'FileReadError' occurred while
+== CMSSW:    [0] Processing run: 1 lumi: 889 event: 88809
+== CMSSW:    [1] Running path 'AODSIMoutput_step'
+== CMSSW:    [2] Calling event method for module PoolOutputModule/'AODSIMoutput'
+== CMSSW:    [3] Reading branch edmTriggerResults_TriggerResults__SIM.
+== CMSSW:    Additional Info:
+== CMSSW:       [a] Fatal Root Error: @SUB=TBasket::ReadBasketBuffers
+== CMSSW: basket:edmTriggerResults_TriggerResults__SIM.present has fNevBuf=6 but fEntryOffset=0, pos=5248896, len=120, fNbytes=120, fObjlen=6, trying to repair
+== CMSSW:
+== CMSSW: ----- End Fatal Exception -------------------------------------------------
+== CMSSW: Another exception was caught while trying to clean up files after the primary fatal exception.
+== CMSSW: 09-Jun-2017 20:00:56 CEST  Closed file root://xrootd-cms.infn.it:1194//store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000/step2_73.root
+== CMSSW: TimeReport> Time report complete in 218.354 seconds
+== CMSSW:  Time Summary:
+== CMSSW:  - Min event:   53.1214
+== CMSSW:  - Max event:   53.1214
+== CMSSW:  - Avg event:   53.1214
+== CMSSW:  - Total loop:  218.142
+== CMSSW:  - Total job:   218.354
+== CMSSW:  Event Throughput: 0.00458417 ev/s
+== CMSSW:  CPU Summary:
+== CMSSW:  - Total loop:  56.3426
+== CMSSW:  - Total job:   56.5209
+== CMSSW:
+== CMSSW:
+== CMSSW: =============================================
+== CMSSW:
+== CMSSW: MessageLogger Summary
+== CMSSW:
+== CMSSW:  type     category        sev    module        subroutine        count    total
+== CMSSW:  ---- -------------------- -- ---------------- ----------------  -----    -----
+== CMSSW:     1 XrdAdaptor           -w file_open                              1        1
+== CMSSW:     2 TimeReport           -e AfterFile                              1        1
+== CMSSW:     3 Additional Exception -s PostEndRun                             1        1
+== CMSSW:     4 Fatal Exception      -s PostProcessPath                        1        1
+== CMSSW:     5 fileAction           -s file_close                             1        1
+== CMSSW:     6 fileAction           -s file_open                              3        3
+== CMSSW:
+== CMSSW:  type    category    Examples: run/evt        run/evt          run/evt
+== CMSSW:  ---- -------------------- ---------------- ---------------- ----------------
+== CMSSW:     1 XrdAdaptor           pre-events
+== CMSSW:     2 TimeReport           PostEndRun
+== CMSSW:     3 Additional Exceptions PostEndRun
+== CMSSW:     4 Fatal Exception      1/88809
+== CMSSW:     5 fileAction           PostEndRun
+== CMSSW:     6 fileAction           pre-events       pre-events       pre-events
+== CMSSW:
+== CMSSW: Severity    # Occurrences   Total Occurrences
+== CMSSW: --------    -------------   -----------------
+== CMSSW: Warning                 1                   1
+== CMSSW: Error                   1                   1
+== CMSSW: System                  6                   6
+== CMSSW: Complete
+== CMSSW: process id is 30196 status is 85
+======== CMSSW OUTPUT FINSHING ========
+ERROR: Caught WMExecutionFailure - code = 85 - name = CmsRunFailure - detail = Error running cmsRun
+{'arguments': ['/bin/bash', '/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']}
+Return code: 85
+
+NOTE: FJR has exit code 8021 and WMCore reports 85; preferring the FJR one.
+ERROR: Exceptional exit at Fri Jun  9 18:00:59 2017 (8021): CmsRunFailure
+CMSSW error message follows.
+Fatal Exception
+An exception of category 'FileReadError' occurred while
+   [0] Processing run: 1 lumi: 889 event: 88809
+   [1] Running path 'AODSIMoutput_step'
+   [2] Calling event method for module PoolOutputModule/'AODSIMoutput'
+   [3] Reading branch edmTriggerResults_TriggerResults__SIM.
+   Additional Info:
+      [a] Fatal Root Error: @SUB=TBasket::ReadBasketBuffers
+basket:edmTriggerResults_TriggerResults__SIM.present has fNevBuf=6 but fEntryOffset=0, pos=5248896, len=120, fNbytes=120, fObjlen=6, trying to repair
+
+ERROR: Traceback follows:
+ Traceback (most recent call last):
+  File "CMSRunAnalysis.py", line 900, in <module>
+    cmssw = executeCMSSWStack(opts, scram)
+  File "CMSRunAnalysis.py", line 698, in executeCMSSWStack
+    cmssw.execute()
+  File "/build/erupeika/w/BUILD/slc6_amd64_gcc493/cms/crabtaskworker/3.3.1705.prodtwlumifix/WMCore-1.1.2.crab1/build/lib/WMCore/WMSpec/Steps/Executors/CMSSW.py", line 251, in execute
+    raise WMExecutionFailure(returncode, "CmsRunFailure", msg)
+WMExecutionFailure: CmsRunFailure
+Message: Error running cmsRun
+{'arguments': ['/bin/bash', '/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun-main.sh', '', 'slc6_amd64_gcc530', 'scramv1', 'CMSSW', 'CMSSW_8_0_21', 'FrameworkJobReport.xml', 'cmsRun', 'PSet.py', 'sandbox.tar.gz', '', '']}
+Return code: 85
+
+	ModuleName : None
+	MethodName : __init__
+	ClassInstance : None
+	FileName : /build/erupeika/w/BUILD/slc6_amd64_gcc493/cms/crabtaskworker/3.3.1705.prodtwlumifix/WMCore-1.1.2.crab1/build/lib/WMCore/WMSpec/Steps/WMExecutionFailure.py
+	ClassName : None
+	LineNumber : 18
+	ErrorNr : 85
+
+Traceback: 
+
+
+
+== Execution site for failed job from site-local-config.xml: T2_IT_Pisa
+Dashboard end parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'CRABUserReadMB': 55.4952, 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_3', 'CrabCpuPercentage': 0.25927018348623854, 'CRABUserWriteMB': 42.3652, 'CrabUserCpuTime': 56.5209, 'NEventsProcessed': 1, 'ExeTime': 218, 'JobExitCode': 8021, 'CRABUserPeakRss': 1573.96, 'NCores': 4, 'ExeExitCode': 8021}
+Dashboard popularity report: {'Basename': '/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step2_M225/170609_074211/0000', 'inputFiles': '/step2_73.root::1::EDM::Remote::1', 'BasenameParent': '', 'inputBlocks': 'UserFilesFakeBlock', 'parentFiles': ''}
+==== Failure sleep STARTING at Fri Jun  9 18:01:00 2017 ====
+Sleeping for 886 seconds due to failure.
+==== Failure sleep FINISHING at Fri Jun  9 18:15:47 2017 ====
++ jobrc=85
++ set +x
+== The job had an exit code of 85 
+======== CMSRunAnalysis.py FINISHING at Fri Jun  9 18:15:47 GMT 2017 ========
+==== SCRAM interaction log contents dump STARTING ====
+Log for recording SCRAM command-line output
+-------------------------------------------
+Beginning TweakPSet
+ arguments: ['/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/TweakPSet.py', '--location=/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672', '--inputFile=job_input_file_list_71.txt', '--runAndLumis=job_lumis_71.json', '--firstEvent=None', '--lastEvent=None', '--firstLumi=None', '--firstRun=None', '--seeding=AutomaticSeeding', '--lheInputFiles=False', '--oneEventMode=0', '--eventsPerLumi=None', '--maxRuntime=-1']
+One event mode disabled until we can put together a decent version of WMCore.
+TweakPSet.py is going to force one event mode
+Tag chirp updates from CMSSW with _cmsRun_
+Not resizing job
+==== SCRAM interaction log contents dump FINISHING ====
+
+real	20m0.712s
+user	1m43.373s
+sys	0m9.242s
+CMSRunAnalysis.sh complete at Fri Jun  9 18:15:47 GMT 2017 with (short) exit status 85
+======== CMSRunAnalsysis.sh at Fri Jun  9 18:15:47 GMT 2017 FINISHING ========
+======== python2.6 bootstrap for stageout at Fri Jun  9 18:15:47 GMT 2017 STARTING ========
++ '[' -f /cvmfs/cms.cern.ch/cmsset_default.sh ']'
++ set +x
++ '[' -e /cvmfs/cms.cern.ch/COMP/slc6_amd64_gcc493/external/python/2.7.6/etc/profile.d/init.sh ']'
++ set +x
++ command -v python2.7
++ rc=0
++ set +x
+Found python2.7 at:
+/cvmfs/cms.cern.ch/COMP/slc6_amd64_gcc493/external/python/2.7.6/bin/python2.7
+======== python2.7 bootstrap for stageout at Fri Jun  9 18:15:47 GMT 2017 FINISHING ========
+======== Attempting to notify HTCondor of file stageout ========
+/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/condor_exec.exe: line 214: condor_chirp: command not found
+======== Stageout at Fri Jun  9 18:15:47 GMT 2017 STARTING ========
+====== Fri Jun  9 18:15:47 2017: cmscp.py STARTING.
+Stageout policy: local, remote
+====== Fri Jun  9 18:15:47 2017: Starting job report validation.
+Job report seems ok (it has the expected structure).
+Retrieved payload exit code ('jobExitCode') = 8021 from job report.
+Retrieved job wrapper exit code ('exitCode') = 8021 from job report.
+====== Fri Jun  9 18:15:47 2017: Finished job report validation (status 0).
+====== Fri Jun  9 18:15:47 2017: Starting to check if user output files exist.
+Output file step3.root exists.
+====== Fri Jun  9 18:15:47 2017: Finished to check if user output files exist (status 0).
+====== Fri Jun  9 18:15:47 2017: Starting to check if user output files are in job report.
+Output file step3.root found in job report.
+====== Fri Jun  9 18:15:47 2017: Finished to check if user output files are in job report (status 0).
+====== Fri Jun  9 18:15:47 2017: Starting creation of user logs archive file.
+Adding cmsRun-stdout.log to archive file cmsRun.log.tar.gz
+Adding cmsRun-stderr.log to archive file cmsRun.log.tar.gz
+Adding FrameworkJobReport.xml to archive file cmsRun.log.tar.gz
+====== Fri Jun  9 18:15:47 2017: Finished creation of user logs archive file (status 0).
+====== Fri Jun  9 18:15:47 2017: Starting initialization of stageout manager for local stageouts.
+       -----> Stageout manager log start
+StageOutMgr::__init__()
+==== Stageout configuration start ====
+Local Stage Out Implementation to be used is: srmv2-lcg
+Local Stage Out PNN to be used is T2_IT_Pisa
+Local Stage Out Catalog to be used is trivialcatalog_file:/afs/pi.infn.it/grid_exp_sw/cms/SITECONF/local/PhEDEx/storage.xml?protocol=srmv2
+Trivial File Catalog has been loaded:
+	lfn-to-pfn: protocol=srmv2 path-match-re=(.*/+store/unmerged/SAM/testSRM/SAM-cmsdcache.*) result=srm://cmsdcache.pi.infn.it:8443/srm/managerv2?SFN=/pnfs/pi.infn.it/data/cms$1
+	lfn-to-pfn: protocol=srmv2 path-match-re=.*/LoadTest07_Pisa_(.*)_.*_.* result=srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/PhEDEx_LoadTest07/LoadTest07_T2_Pisa_$1
+	lfn-to-pfn: protocol=dcap path-match-re=/+store/(.*) result=file:/gpfs/ddn/srm/cms/store/$1
+	lfn-to-pfn: protocol=srmv2 path-match-re=/+store/(.*) result=srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/$1
+	lfn-to-pfn: protocol=srm path-match-re=/+store/(.*) result=srm://stormfe1.pi.infn.it:8444/srm/managerv1?SFN=/cms/store/$1
+	lfn-to-pfn: protocol=direct path-match-re=/+store/test/xrootd/T2_IT_Pisa/store/(.*) result=/gpfs/ddn/srm/cms/store/$1
+	lfn-to-pfn: protocol=direct path-match-re=/store/(.*) result=/gpfs/ddn/srm/cms/store/$1
+	lfn-to-pfn: protocol=xrootd path-match-re=/+store/(.*) result=root://xrootd-cms.infn.it:1194//store/$1
+	pfn-to-lfn: protocol=srmv2 path-match-re=.*/+store/unmerged/SAM/testSRM/SAM-cmsdcache(.*) result=/store/unmerged/SAM/testSRM/SAM-cmsdcache$1
+	pfn-to-lfn: protocol=srmv2 path-match-re=srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/PhEDEx_LoadTest07/LoadTest07_T2_Pisa_(.*) result=/store/PhEDEx_LoadTest07/LoadTest07_T2_Pisa_$1
+	pfn-to-lfn: protocol=direct path-match-re=/gpfs/ddn/srm/cms/store/(.*) result=/store/$1
+	pfn-to-lfn: protocol=dcap path-match-re=.*gpfs/ddn/srm/cms/(.*) result=/$1
+	pfn-to-lfn: protocol=srmv2 path-match-re=.*\?SFN=/cms/(.*) result=/$1
+	pfn-to-lfn: protocol=srm path-match-re=.*\?SFN=/cms/(.*) result=/$1
+	pfn-to-lfn: protocol=xrootd path-match-re=root://xrootd-cms.infn.it:1194//store/(.*) result=/store/$1
+There are 1 fallback stage out definitions.
+	Fallback to : T1_IT_CNAF_Disk using: srmv2-lcg 
+
+==== Stageout configuration finish ====
+       <----- Stageout manager log finish
+Initialization was ok.
+====== Fri Jun  9 18:15:47 2017: Finished initialization of stageout manager for local stageouts (status 0).
+Temp site name not found (likely not present in site-local-config.xml or job report). Falling back to querying the phedex for site name.
+Will use gfal2 commands for direct stageout.
+====== Fri Jun  9 18:15:48 2017: Starting initialization of stageout implementation for direct stageouts.
+Initialization was ok.
+====== Fri Jun  9 18:15:48 2017: Finished initialization of stageout implementation for direct stageouts (status 0).
+====== Fri Jun  9 18:15:48 2017: Starting local stageout of user logs archive file.
+       -----> Stageout manager log start
+==>Working on file: /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+===> Attempting Local Stage Out.
+LFN to PFN match made:
+LFN: /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+PFN: srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+
+2017-06-09T20:15:48 : Creating output directory...
+2017-06-09T20:15:48 : Running the stage out...
+2017-06-09T20:15:48
+Using grid catalog type: UNKNOWN
+Using grid catalog : (null)
+VO name: cms
+Checksum type: None
+Destination SE type: SRMv2
+Destination SRM Request Token: 730548d0-2fe2-492c-8cc8-8b3d1e1c60a2
+srm://stormfe1.pi.infn.it:8444/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz: File exists
+lcg_cp: File exists
+
+lcg-cp exit status: 1
+Non-zero lcg-cp Exit status!!!
+Cleaning up failed file:
+2017-06-09T20:15:50
+2017-06-09T20:15:50 : Command exited with status: 23
+
+ERROR: Exception During Stage Out:
+
+2017-06-09T20:15:50 : Command exited non-zero
+Attempt 1 to stage out failed.
+Automatically retrying in 60 secs
+ Error details:
+StageOutError
+Message: 2017-06-09T20:15:50 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : None
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : /build/erupeika/w/BUILD/slc6_amd64_gcc493/cms/crabtaskworker/3.3.1705.prodtwlumifix/WMCore-1.1.2.crab1/build/lib/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/sh
+source /etc/profile.d/grid-env.sh; date "+%Y-%m-%dT%H:%M:%S"; lcg-cp -b -D srmv2 --vo cms --srm-timeout 2400 --sendreceive-timeout 2400 --connect-timeout 300 --verbose -v --connect-timeout 240  file:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun.log.tar.gz  srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2> stageout.log
+            EXIT_STATUS=$?
+            cat stageout.log
+            echo -e "
+lcg-cp exit status: $EXIT_STATUS"
+            if [[ $EXIT_STATUS != 0 ]]; then
+                echo "Non-zero lcg-cp Exit status!!!"
+                echo "Cleaning up failed file:"
+                source /etc/profile.d/grid-env.sh; date "+%Y-%m-%dT%H:%M:%S";  lcg-del -b -l -D srmv2 --srm-timeout 600 --sendreceive-timeout 600 --connect-timeout 300 --vo cms srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+                exit 60311
+            fi
+
+            FILE_SIZE=`stat -c %s /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun.log.tar.gz`
+echo "Local File Size is:  $FILE_SIZE"
+
+            LCG_OUTPUT=`lcg-ls -l -b -D srmv2 --srm-timeout 600 --sendreceive-timeout 600 --connect-timeout 300 srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz 2>/dev/null`
+            SRM_SIZE=`echo "$LCG_OUTPUT" | awk 'NR==1{print $5}'`
+            SRM_CHECKSUM=`echo "$LCG_OUTPUT" | sed -nr 's/^.*\s([a-f0-9]{8})\s*\([aA][dD][lL][eE][rR]32\)\s*$/\1/p'`
+            echo "Remote File Size is: $SRM_SIZE"
+            echo "Remote Checksum is:  $SRM_CHECKSUM"
+            if [[ $SRM_SIZE == $FILE_SIZE ]]; then
+                exit 0
+            else
+                echo $LCG_OUTPUT
+                echo "ERROR: Size Mismatch between local and SE. Cleaning up failed file..."
+                source /etc/profile.d/grid-env.sh; date "+%Y-%m-%dT%H:%M:%S";  lcg-del -b -l -D srmv2 --srm-timeout 600 --sendreceive-timeout 600 --connect-timeout 300 --vo cms srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+                exit 60311
+            fi
+            
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+
+
+
+2017-06-09T20:16:50 : Running the stage out...
+2017-06-09T20:16:51
+Using grid catalog type: UNKNOWN
+Using grid catalog : (null)
+VO name: cms
+Checksum type: None
+Destination SE type: SRMv2
+Destination SRM Request Token: 341761d5-1db0-40b4-bf09-5afc30566d08
+Source URL: file:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun.log.tar.gz
+File size: 9096
+Source URL for copy: file:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/cmsRun.log.tar.gz
+Destination URL: gsiftp://stormgf2.pi.infn.it:2811//gpfs/ddn/srm/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz
+# streams: 1
+            0 bytes      0.00 KB/sec avg      0.00 KB/sec inst
+         9096 bytes     37.39 KB/sec avg     37.39 KB/sec inst
+
+Transfer took 1040 ms
+
+lcg-cp exit status: 0
+Local File Size is:  9096
+Remote File Size is: 9096
+Remote Checksum is:  b48ae12e
+2017-06-09T20:16:53 : Command exited with status: 0
+
+===> Stage Out Successful: {'LFN': '/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz', 'PNN': 'T2_IT_Pisa', 'StageOutCommand': 'srmv2-lcg', 'StageOutReport': [], 'PFN': 'srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz'}
+       <----- Stageout manager log finish
+INFO: PNN is defined in site-local-config. unknown changed to T2_IT_Pisa
+Setting temp_storage_site = 'T2_IT_Pisa', storage_site = 'T2_CH_CERN', local_stageout = True for file cmsRun.log.tar.gz in job report.
+Dashboard stageout failure parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_3', 'JobExitCode': 8021, 'StageOutReport': [{'StageOutType': 'LOCAL', 'LFN': '/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz', 'StageOutExit': 0, 'StageOutCommand': None, 'PNN': 'T2_IT_Pisa'}]}
+====== Fri Jun  9 18:16:54 2017: Finished local stageout of user logs archive file (status 0).
+====== Fri Jun  9 18:16:54 2017: Starting local stageout of user output files.
+-----> Fri Jun  9 18:16:54 2017: Starting local stageout of step3.root.
+       -----> Stageout manager log start
+==>Working on file: /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root
+===> Attempting Local Stage Out.
+LFN to PFN match made:
+LFN: /store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root
+PFN: srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root
+
+2017-06-09T20:16:54 : Creating output directory...
+2017-06-09T20:16:54 : Running the stage out...
+2017-06-09T20:16:55
+Using grid catalog type: UNKNOWN
+Using grid catalog : (null)
+VO name: cms
+Checksum type: None
+Destination SE type: SRMv2
+Destination SRM Request Token: adfa4516-9ed9-4a54-a0b1-0cdab5a1f381
+srm://stormfe1.pi.infn.it:8444/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root: File exists
+lcg_cp: File exists
+
+lcg-cp exit status: 1
+Non-zero lcg-cp Exit status!!!
+Cleaning up failed file:
+2017-06-09T20:16:56
+2017-06-09T20:16:56 : Command exited with status: 23
+
+ERROR: Exception During Stage Out:
+
+2017-06-09T20:16:56 : Command exited non-zero
+Attempt 1 to stage out failed.
+Automatically retrying in 60 secs
+ Error details:
+StageOutError
+Message: 2017-06-09T20:16:56 : Command exited non-zero
+	ErrorCode : 60311
+	ModuleName : None
+	MethodName : __init__
+	ErrorType : GeneralStageOutFailure
+	ClassInstance : None
+	FileName : /build/erupeika/w/BUILD/slc6_amd64_gcc493/cms/crabtaskworker/3.3.1705.prodtwlumifix/WMCore-1.1.2.crab1/build/lib/WMCore/Storage/StageOutError.py
+	ClassName : None
+	Command : #!/bin/sh
+source /etc/profile.d/grid-env.sh; date "+%Y-%m-%dT%H:%M:%S"; lcg-cp -b -D srmv2 --vo cms --srm-timeout 2400 --sendreceive-timeout 2400 --connect-timeout 300 --verbose -v --connect-timeout 240  file:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/step3.root  srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root 2> stageout.log
+            EXIT_STATUS=$?
+            cat stageout.log
+            echo -e "
+lcg-cp exit status: $EXIT_STATUS"
+            if [[ $EXIT_STATUS != 0 ]]; then
+                echo "Non-zero lcg-cp Exit status!!!"
+                echo "Cleaning up failed file:"
+                source /etc/profile.d/grid-env.sh; date "+%Y-%m-%dT%H:%M:%S";  lcg-del -b -l -D srmv2 --srm-timeout 600 --sendreceive-timeout 600 --connect-timeout 300 --vo cms srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root
+                exit 60311
+            fi
+
+            FILE_SIZE=`stat -c %s /home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/step3.root`
+echo "Local File Size is:  $FILE_SIZE"
+
+            LCG_OUTPUT=`lcg-ls -l -b -D srmv2 --srm-timeout 600 --sendreceive-timeout 600 --connect-timeout 300 srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root 2>/dev/null`
+            SRM_SIZE=`echo "$LCG_OUTPUT" | awk 'NR==1{print $5}'`
+            SRM_CHECKSUM=`echo "$LCG_OUTPUT" | sed -nr 's/^.*\s([a-f0-9]{8})\s*\([aA][dD][lL][eE][rR]32\)\s*$/\1/p'`
+            echo "Remote File Size is: $SRM_SIZE"
+            echo "Remote Checksum is:  $SRM_CHECKSUM"
+            if [[ $SRM_SIZE == $FILE_SIZE ]]; then
+                exit 0
+            else
+                echo $LCG_OUTPUT
+                echo "ERROR: Size Mismatch between local and SE. Cleaning up failed file..."
+                source /etc/profile.d/grid-env.sh; date "+%Y-%m-%dT%H:%M:%S";  lcg-del -b -l -D srmv2 --srm-timeout 600 --sendreceive-timeout 600 --connect-timeout 300 --vo cms srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root
+                exit 60311
+            fi
+            
+	LineNumber : 32
+	ErrorNr : 0
+	ExitCode : 23
+
+Traceback: 
+
+
+
+2017-06-09T20:17:56 : Running the stage out...
+2017-06-09T20:17:57
+Using grid catalog type: UNKNOWN
+Using grid catalog : (null)
+VO name: cms
+Checksum type: None
+Destination SE type: SRMv2
+Destination SRM Request Token: 1efa84ae-b087-4e55-a342-a971ce4b7094
+Source URL: file:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/step3.root
+File size: 44503384
+Source URL for copy: file:/home/grid/cmsplt17/home_cream_201661874/CREAM201661874/glide_cv6pC5/execute/dir_29672/step3.root
+Destination URL: gsiftp://stormgf2.pi.infn.it:2811//gpfs/ddn/srm/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root
+# streams: 1
+            0 bytes      0.00 KB/sec avg      0.00 KB/sec inst
+      1048576 bytes   7367.16 KB/sec avg   7367.16 KB/sec inst
+
+Transfer took 1100 ms
+
+lcg-cp exit status: 0
+Local File Size is:  44503384
+Remote File Size is: 44503384
+Remote Checksum is:  6d2b4b9a
+2017-06-09T20:18:03 : Command exited with status: 0
+
+===> Stage Out Successful: {'LFN': '/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root', 'PNN': 'T2_IT_Pisa', 'StageOutCommand': 'srmv2-lcg', 'StageOutReport': [], 'PFN': 'srm://stormfe1.pi.infn.it:8444/srm/managerv2?SFN=/cms/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root'}
+       <----- Stageout manager log finish
+INFO: PNN is defined in site-local-config. unknown changed to T2_IT_Pisa
+Setting temp_storage_site = 'T2_IT_Pisa', storage_site = 'T2_CH_CERN', local_stageout = True for file step3.root in job report.
+Dashboard stageout failure parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_3', 'JobExitCode': 8021, 'StageOutReport': [{'StageOutType': 'LOCAL', 'LFN': '/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/step3_71.root', 'StageOutExit': 0, 'StageOutCommand': None, 'PNN': 'T2_IT_Pisa'}]}
+<----- Fri Jun  9 18:18:04 2017: Finished local stageout of step3.root (status 0).
+====== Fri Jun  9 18:18:04 2017: Finished local stageout of user output files (status 0).
+WARNING: url for transfer is not couchdb (likely an Oracle transfer). Skipping injection of transfer requests to ASO.
+====== Fri Jun  9 18:18:04 2017: Starting upload of logs archive file metadata.
+Uploading file metadata for cmsRun_71.log.tar.gz to https://cmsweb.cern.ch/crabserver/prod/filemetadata: {'outlfn': '/store/user/aioannou/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz', 'outdatasetname': '/FakeDataset/fakefile-FakePublish-5b6a581e4ddd41b130711a045d5fecb9/USER', 'checksumadler32': '6d1096fe', 'outsize': 9096, 'checksumcksum': '3701783610', 'outlocation': 'T2_CH_CERN', 'jobid': '71', 'outtmplfn': '/store/temp/user/aioannou.dc9a2814cd5f8b56d90b2da7cc959f90165c73d1/CRAB_UserFiles/crab_privateMCProduction_Step3_M225/170609_163147/0000/failed/log/cmsRun_71.log.tar.gz', 'appver': 'CMSSW_8_0_21', 'outtype': 'LOG', 'checksummd5': 'asda', 'publishdataname': 'crab_privateMCProduction_Step3_M225-00000000000000000000000000000000', 'taskname': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'acquisitionera': 'null', 'outtmplocation': 'T2_IT_Pisa', 'events': 0, 'directstageout': 0}
+====== Fri Jun  9 18:18:04 2017: Finished upload of logs archive file metadata (status 0).
+Job wrapper did not finish successfully (exit code 8021). Setting that same exit code for the stageout wrapper.
+Stageout wrapper finished with exit code 8021. Will report failure to Dashboard.
+Dashboard stageout failure parameters: {'MonitorID': '170609_163147:aioannou_crab_privateMCProduction_Step3_M225', 'MonitorJobID': '71_https://glidein.cern.ch/71/170609:163147:aioannou:crab:privateMCProduction:Step3:M225_3', 'JobExitCode': 8021}
+====== Fri Jun  9 18:18:06 2017: cmscp.py FINISHING (status 8021).
+======== Stageout at Fri Jun  9 18:18:06 GMT 2017 FINISHING (short status 85) ========
+======== gWMS-CMSRunAnalysis.sh FINISHING at Fri Jun  9 18:18:06 GMT 2017 on se1wn14.pi.infn.it with (short) status 85 ========
+Local time: Fri Jun  9 20:18:06 CEST 2017
+Short exit status: 85
+Cannot find condor_chirp to set up the job exit code (ignoring, that's for monitoring purposes)
+Job Running time in seconds:  1341
